@@ -1,0 +1,87 @@
+body {
+  background-color: darkkhaki;
+  position: relative;
+}
+
+.box-first {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.flexer {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.double {
+  align-items: center;
+  justify-content: center;
+}
+
+.box-second {
+  width: 500px;
+  height: 500px;
+  border: 3px solid;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#one {
+  background-color: blueviolet;
+}
+
+#two {
+  background-color: blueviolet;
+}
+
+#three {
+  background-color: blueviolet;
+}
+
+#four {
+  background-color: blueviolet;
+}
+
+#five {
+  background-color: blueviolet;
+}
+
+#six {
+  background-color: blueviolet;
+}
+#seven {
+  background-color: blueviolet;
+}
+#eight {
+  background-color: blueviolet;
+}
+#nine {
+  background-color: blueviolet;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
