@@ -1,3 +1,4 @@
+// 숫자 크기 비교 1
 let number_1 = 9;
 console.log(number_1);
 
@@ -5,13 +6,15 @@ if (number_1 < 10) {
   console.log('number_1은 10보다 작다');
 }
 
-let number_2 = 1;
+// 짝수
+let number_2 = 2;
 console.log(number_2);
 
 if (number_2 % 2 === 0) {
   console.log('짝수');
 }
 
+//자료형 확인
 let variable = 2;
 console.log(variable);
 
