@@ -47,3 +47,30 @@ for (let person1 of people) {
   }
 }
 //이름을 활용하여 데이터 쉽게
+people = {
+  jun: {
+    name: 'jun',
+    age: 15,
+    gender: 'M',
+  },
+  ken: {
+    name: 'ken',
+    age: 36,
+    gender: 'F',
+  },
+  alex: {
+    name: 'alex',
+    age: 37,
+    gender: null,
+  },
+};
+
+// 마지막은 이런식으로
+// people.jun;
+
+const objectPeople = {};
+
+for (const person of people) {
+  const name = person.name;
+  objectPeople[name] = person;
+}
