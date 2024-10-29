@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <p id="first">첫 번째 문단</p>
+      <p class="second">두 번째 문단</p>
+    </div>
+    <script>
+      const firstParagraph = document.querySelector('#first');
+      console.dir(firstParagraph); // 첫 번째 문단
+
+      const secondParagraph = document.querySelector('.second');
+      console.log(secondParagraph.textContent); // 두 번째 문단
+    </script>
+  </body>
+</html>
