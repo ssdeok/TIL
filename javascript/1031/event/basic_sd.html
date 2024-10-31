@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button id="my-button">클릭</button>
+    <script>
+      const button = document.querySelector('#my-button');
+
+      button.addEventListener('click', function () {
+        alert('이벤트 리스너로 등록된 클릭 이벤트 1');
+      });
+
+      button.addEventListener('click', function () {
+        alert('이벤트 리스너로 등록된 클릭 이벤트 2');
+      });
+    </script>
+  </body>
+</html>

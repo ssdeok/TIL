@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- html 코드도 자유롭게 수정하세요! -->
+
+    <!-- button을 클릭하면 원본 텍스트가 "텍스트가 바뀜"으로 변하도록 구현하시오. -->
+    <div class="container">
+      <div id="firstText">바뀔 예정인 텍스트</div>
+      <button id="firstButton">클릭</button>
+    </div>
+    <script>
+      // 1. 버튼 필요
+      // 2. 버튼을 클릭하면 텍스트 변화
+      // 3. 원본 텍스트 변경해라
+      // 4. 원본 텍스트를 선택 후 번경
+      const firstButton = document.querySelector('#firstButton');
+      firstButton.addEventListener('click', () => {
+        const firstText = document.querySelector('#firstText');
+        firstText.textContent = '텍스트가 바뀜';
+      });
+    </script>
+
+    <!-- 무언가를 클릭하면 원본 텍스트가 빨간색으로, 다른 무언가를 클릭하면 원본 텍스트가 파란색으로 변하도록 구현하시오. -->
+    <div class="container">
+      <div id="secondText">이 텍스트의 색상을 바꾸세요!</div>
+      <button id="secondButton">클릭</button>
+      <button id="secondButton2">클릭</button>
+    </div>
+    <script>
+      const secondButton = document.querySelector('#secondButton');
+      const secondText = document.querySelector('#secondText');
+
+      secondButton.addEventListener('click', () => {
+        secondText.style.color = 'red';
+      });
+
+      secondButton2.addEventListener('click', () => {
+        secondText.style.color = 'blue';
+      });
+    </script>
+
+    <!-- button을 클릭하면 텍스트가 보였다 안보였다 바뀌도록 구현하시오. -->
+    <!-- display : none 속성 및 class를 활용합니다 -->
+    <!-- visibility : hidden 속성 및 class를 활용합니다. -->
+    <div class="container">
+      <div class="hider">보였다 안보였다</div>
+      <button id="thirdButton">클릭</button>
+    </div>
+    <!-- 1. 클릭을 한다
+     2. 텍스트가 사라진다
+     3. 클릭을 한다
+     4. 텍스트가 나타난다 -->
+    <script>
+      const thirdButton = document.querySelector('#thirdButton');
+      const thirdText = document.querySelector('.hider');
+
+      thirdButton.addEventListener('click', () => {
+        thirdText.classList.toggle('hidden');
+      });
+    </script>
+    <!-- 입력을 하면 입력한 text가 아래의 div태그에 표현되도록 바꾸시오. -->
+    <!-- hint : input의 입력값은 value로 표현된다. -->
+    <div class="container">
+      <input type="text" id="inpTag" />
+      <div id="textTag"></div>
+    </div>
+    <script>
+      const inputTag = document.querySelector('#inpTag');
+      const textTag = document.querySelector('#textTag');
+
+      inputTag.addEventListener('input', (e) => {
+        const target = e.target;
+        const value = target.value;
+        textTag.textContent = value;
+      });
+    </script>
+    <!-- 마우스를 올리면 배경색이 빨간색으로 변하고, 내리면 다시 검정색으로 변하는 기능을 구현하시오. -->
+    <div class="container">
+      <div class="box"></div>
+    </div>
+    <script>
+      const boxing = document.querySelector('.box');
+
+      boxing.addEventListener('mouseover', (e) => {
+        const target = e.target;
+        target.style.backgroundColor = 'red';
+      });
+
+      boxing.addEventListener('mouseout', (e) => {
+        const target2 = e.target;
+        target2.style.backgroundColor = 'black';
+      });
+    </script>
+    <!-- 버튼을 누르면 숫자가 1 증가하는 기능을 구현하시오 -->
+    <div class="container">
+      <div id="divTag">0</div>
+      <button id="plusTag">버튼</button>
+    </div>
+    <script>
+      const plusTag = document.querySelector('#plusTag');
+      const divTag = document.querySelector('#divTag');
+      // let number = 0;
+      plusTag.addEventListener('click', (e) => {
+        let number = parseInt(divTag.textContent);
+        number++;
+        divTag.textContent = number;
+      });
+    </script>
+    <!-- 색상을 입력하면 텍스트의 색이 변하는 기능을 구현하시오. -->
+    <div class="container">
+      <h1 id="text">what color am I</h1>
+      <input type="text" id="colorTag" />
+    </div>
+    <script>
+      const colorTag = document.querySelector('#colorTag');
+      const h1Tag = document.querySelector('#text');
+
+      colorTag.addEventListener('input', (e) => {
+        const target = e.target;
+        const value = target.value;
+        h1Tag.style.color = value;
+      });
+    </script>
+  </body>
+</html>
