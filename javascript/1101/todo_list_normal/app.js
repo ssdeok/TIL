@@ -36,31 +36,62 @@ function renderTodo(todo) {
     liTag.remove();
   });
 
-  liTag.append(divTag);
-  liTag.append(cButton);
-  liTag.append(dButton);
+  liTag.append(divTag, cButton, dButton);
 
   todoList.append(liTag);
 }
 
 // Todo 목록 초기화 (GET 요청)
+
+// 서버로부터 모든 Todo를 가져와 화면에 표시한다.
+// Todo 목록을 반복해서 개별 Todo를 화면에 그린다. renderTodo()
+
+// async function initTodos() {
+//   try {
+//     const dataArray = await fetch(URL);
+//     const data = await dataArray.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error('Error:', error);
+//   }
+// }
+
+// async function initTodos() {
+//   try {
+//     console.log('Hello World');
+//     const dataArray = await fetch(URL).then((response) => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     });
+//     console.log(dataArray);
+//     dataArray.forEach((data) => {
+//       renderTodo(data);
+//     });
+//   } catch (error) {
+//     console.error('Error', error);
+//   }
+// }
+
 async function initTodos() {
-  console.log('Hello World');
-  const dataArray = await fetch(URL).then((response) => {
-    return response.json();
-  });
-  console.log(dataArray);
-  dataArray.forEach((data) => {
-    renderTodo(data);
-  });
-  // 서버로부터 모든 Todo를 가져와 화면에 표시한다.
-  // Todo 목록을 반복해서 개별 Todo를 화면에 그린다. renderTodo()
+  try {
+    console.log('Hello World');
+    const dataArray = await fetch(URL).then((response) => {
+      return response.json();
+    });
+    console.log(dataArray);
+    dataArray.forEach((data) => {
+      renderTodo(data);
+    });
+  } catch (error) {
+    console.error('Error', error);
+  }
 }
 // Todo 추가하기 (POST 요청)
-async function addTodo() {
-  // 입력 필드에서 새로운 Todo의 내용을 가져와 서버에 저장하고, 해당 요소를 목록에 추가한다.
-  // Todo 추가 요청이 정상적으로 끝나면 해당 Todo를 화면에 그린다. renderTodo()
-}
+async function addTodo() {}
+// 입력 필드에서 새로운 Todo의 내용을 가져와 서버에 저장하고, 해당 요소를 목록에 추가한다.
+// Todo 추가 요청이 정상적으로 끝나면 해당 Todo를 화면에 그린다. renderTodo()
 
 // Todo 완료 상태 토글 (PATCH 요청)
 async function toggleComplete(id) {
