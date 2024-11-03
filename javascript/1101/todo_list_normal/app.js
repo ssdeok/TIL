@@ -89,9 +89,22 @@ async function initTodos() {
   }
 }
 // Todo 추가하기 (POST 요청)
-async function addTodo() {}
-// 입력 필드에서 새로운 Todo의 내용을 가져와 서버에 저장하고, 해당 요소를 목록에 추가한다.
-// Todo 추가 요청이 정상적으로 끝나면 해당 Todo를 화면에 그린다. renderTodo()
+async function addTodo() {
+  // 입력 필드에서 새로운 Todo의 내용을 가져와 서버에 저장하고, 해당 요소를 목록에 추가한다.
+  // Todo 추가 요청이 정상적으로 끝나면 해당 Todo를 화면에 그린다. renderTodo()
+  try {
+    const dataSave = await fetch(URL, {
+      method: 'POST',
+      id: 2,
+      content: '복습하기',
+      completed: false,
+    });
+    const data2 = await response.json();
+    console.log(data2);
+  } catch (error) {
+    console.error('Error', error);
+  }
+}
 
 // Todo 완료 상태 토글 (PATCH 요청)
 async function toggleComplete(id) {
