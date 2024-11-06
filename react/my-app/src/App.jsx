@@ -1,8 +1,19 @@
-function App() {
+import React from "react";
+import Profile from "../Profile";
+import Avatar from "./Avatar";
+
+export default function App() {
   return (
-    <div>
-    </div>
+    <Profile>
+      <Card>
+        <Avatar
+          size={100}
+          person={{
+            name: "Katsuko Saruhashi",
+            imageId: "YfeOqp2",
+          }}
+        />
+      </Card>
+    </Profile>
   );
 }
-
-export default Profile;
