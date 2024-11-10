@@ -1,9 +1,14 @@
-function App() {
-  function handelClick() {
-    alert('클릭했네!');
-  }
+import React from 'react';
+import Button from './Button';
+// import Counter from './Counter';
 
-  return <div onClick={handelClick}>App</div>;
+export default function App() {
+  return (
+    <>
+      <div>App</div>
+      {/* <Counter></Counter> */}
+      <Button onClick={() => alert('실행!')} message="haha"></Button>
+      <Button onClick={() => alert('취소!')}></Button>
+    </>
+  );
 }
-
-export default App;
