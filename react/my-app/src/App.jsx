@@ -1,19 +1,14 @@
-import React from "react";
-import Profile from "../Profile";
-import Avatar from "./Avatar";
+import React from 'react';
+import Button from './Button';
+// import Counter from './Counter';
 
 export default function App() {
   return (
-    <Profile>
-      <Card>
-        <Avatar
-          size={100}
-          person={{
-            name: "Katsuko Saruhashi",
-            imageId: "YfeOqp2",
-          }}
-        />
-      </Card>
-    </Profile>
+    <>
+      <div>App</div>
+      {/* <Counter></Counter> */}
+      <Button onClick={() => alert('실행!')} message="haha"></Button>
+      <Button onClick={() => alert('취소!')}></Button>
+    </>
   );
 }
