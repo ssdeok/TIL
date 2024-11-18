@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import RedButton from './RedButton';
 // import Counter from './Counter';
 
 function Profile() {
@@ -9,7 +10,8 @@ function Profile() {
 export default function App() {
   return (
     <>
-      <div>App</div>
+      <RedButton></RedButton>
+      {/* <div>App</div> */}
       {/* <Counter></Counter> */}
       {/* <Button onClick={() => alert('실행!')} message="haha"></Button>
       <Button onClick={() => alert('취소!')}></Button> */}
