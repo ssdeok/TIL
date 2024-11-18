@@ -5,7 +5,7 @@ async function getPopularMovies() {
     const path = '/now_playing';
     const params = new URLSearchParams({
       api_key: 'eab8c9893e725b2e167187cef66bae3d',
-      language: 'ja',
+      language: 'ko',
     });
     // const params = 'api_key=eab8c9893e725b2e167187cef66bae3d&language=ko';
 

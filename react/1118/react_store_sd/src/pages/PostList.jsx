@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import postApi from "../api/postsApi";
 
 export default function PostList() {
   const navigate = useNavigate();
@@ -13,11 +14,13 @@ export default function PostList() {
     // const posts = useSelector((state) => state.posts);
     async function fetchPosts() {
       try {
-        const url = "http://localhost:3000/posts";
-        const response = await axios.get(url);
-        // const response = await axios({ url: url });
+        // const url = "http://localhost:3000/posts";
+        // const response = await axios.get(url);
+        // // const response = await axios({ url: url });
 
-        const data = response.data;
+        // const data = response.data;
+        // 바로 위를 주석한뒤, 여기를 1118에 바꾼거임,
+        const data = await postApi.getPosts();
 
         setPosts(data);
       } catch (err) {

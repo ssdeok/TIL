@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import postApi from "../api/postsApi";
 
 export default function PostDetail() {
   const navigate = useNavigate();
@@ -11,11 +12,13 @@ export default function PostDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const url = `http://localhost:3000/posts/${postId}`;
+    // const url = `http://localhost:3000/posts/${postId}`;
     async function fetchPost() {
       try {
-        const response = await axios.get(url);
-        const data = response.data;
+        // const response = await axios.get(url);
+        // const data = response.data;
+        // 위를 주석하고, 1118에 바꿈
+        const data = await postApi.getPostById(postId);
         setPost(data);
       } catch (err) {
         // navigate("/posts");
