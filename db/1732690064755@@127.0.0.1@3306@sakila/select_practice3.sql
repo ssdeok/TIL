@@ -109,11 +109,14 @@ ORDER BY `length`;
 
 
 -- 배우와 출연 영화 목록 M:N
+SELECT * 
+FROM actor
 
 
 
 -- 모든 고객의 대여 현황 조회 1:N
-
+SELECT * 
+FROM customer c
 
 
 -- 영화별 대여 현황 M:N
