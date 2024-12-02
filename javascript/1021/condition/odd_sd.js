@@ -59,7 +59,7 @@ let iswork;
 // 9~18에는 iswork는 true
 // 아닐때는 iswork는 false
 
-if (9 <= nowtime && notime <= 18) {
+if (9 <= nowtime && nowtime <= 18) {
   iswork = true;
 } else {
   iswork = false;
