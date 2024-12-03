@@ -1,0 +1,9 @@
+서승덕 api 키
+
+a1ec295fa544cc8f7eee58f949306e5e
+
+서승덕 api 토큰
+
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMWVjMjk1ZmE1NDRjYzhmN2VlZTU4Zjk0OTMwNmU1ZSIsIm5iZiI6MTczMjAwMDQzMC42Njc4Njg2LCJzdWIiOiI2NzFmN2E1MzZlNDIxMDc4MGY3OTdkMjgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.PdAdPq4S2FNGeSVr9O1_SAZmXhzR6Q0F2vnLVXkkYNw
+
+https://api.themoviedb.org/3/movie/now_playing?api_key=a1ec295fa544cc8f7eee58f949306e5e

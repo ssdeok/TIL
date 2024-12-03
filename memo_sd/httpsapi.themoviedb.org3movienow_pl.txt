@@ -1,0 +1,4 @@
+https://api.themoviedb.org/3/movie/now_playing?api_key=eab8c9893e725b2e167187cef66bae3d
+
+
+npm create vite@latest my-react -- --template react

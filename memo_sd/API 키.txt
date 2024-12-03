@@ -1,0 +1,10 @@
+API 키
+eab8c9893e725b2e167187cef66bae3d
+
+API 읽기 액세스 토큰
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYWI4Yzk4OTNlNzI1YjJlMTY3MTg3Y2VmNjZiYWUzZCIsIm5iZiI6MTcyMzQ0OTA0NS4yNzgyMTUsInN1YiI6IjYxMDM1NDljNGU1MmVkMDA3NTg3ZDhjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7jp_CFU3rlNfbk_sFKDq87w1atDZfompDS3JDjvCxtU
+
+
+
+https://api.themoviedb.org/3/movie/now_playing?api_key=eab8c9893e725b2e167187cef66bae3d
+

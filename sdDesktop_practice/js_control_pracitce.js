@@ -67,4 +67,6 @@ console.log('-------------------');
 //nums가 다음과 같을 때, 구구단 3단을 출력하시오
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-if ()
+for (let gugudan of nums) {
+  
+}
