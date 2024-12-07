@@ -49,7 +49,7 @@ let result;
 result = [];
 for (let arr of nums) {
   // arr[1,2,3] <-이게 있다고 생각하면됨
-  sum = 0;
+  let sum = 0;
   for (let num of arr) {
     sum += num;
   }
@@ -58,15 +58,18 @@ for (let arr of nums) {
 console.log(result);
 
 console.log('--------------------');
+
 result = [];
 for (let i = 0; i < n; i++) {
   sum = 0;
   for (let j = 0; j < m; j++) {
-    sum += nums[i][j];
+    sum += nums[n][m];
   }
   result.push(sum);
 }
+
 console.log('--------------------');
+
 var _ = require('lodash');
 
 result = [];
