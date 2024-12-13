@@ -49,4 +49,5 @@ public class ClassPractice {
     public static double calculateCircleArea(int radius) {
         return radius * radius * 3.14;
     }
+
 }

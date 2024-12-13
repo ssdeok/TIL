@@ -8,4 +8,9 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
+    public Person(){
+        this.name = "basic name";
+        this.age = 18;
+    }
 }

@@ -61,6 +61,6 @@ public class MP3Player {
 
     // - 정보 조회
     void showInfo() {
-        System.out.printf("model : %s, isOn : %d, volume : %d \n", model, isOn, volume);
+        System.out.printf("model : %s, isOn : %b, volume : %d \n", model, isOn, volume);
     }
 }
