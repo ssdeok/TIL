@@ -1,5 +1,5 @@
 
-public class Problem54 {
+public class Problem54_jun {
 
         // Class 생성 후 2번째줄부터 아래 코드 복사 + 붙여넣기
         // 클래스 이름은 유지
