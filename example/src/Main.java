@@ -1,15 +1,12 @@
-import java.sql.SQLOutput;
-import java.util.Arrays;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String_practice[] args) {
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         class Solution {
-            public int solution(int totalPrice, String membership, String paymentMethod) {
+            public int solution(int totalPrice, String_practice membership, String_practice paymentMethod) {
 
                 double result = totalPrice;
                 
@@ -25,17 +22,17 @@ public class Main {
                 }
 
                 // 등급별 할인
-               switch (membership) {
-                   case "실버":
-                       result = result * (1 - 0.03);
-                       break;
-                   case "골드":
-                       result = result * (1 - 0.05);
-                       break;
-                   case "플래티넘":
-                       result = result * (1 - 0.10);
-                       break;
-               }
+//               switch (membership) {
+//                   case "실버":
+//                       result = result * (1 - 0.03);
+//                       break;
+//                   case "골드":
+//                       result = result * (1 - 0.05);
+//                       break;
+//                   case "플래티넘":
+//                       result = result * (1 - 0.10);
+//                       break;
+//               }
 
                 //결제 방식 별
                 if (paymentMethod.equals("현금")) {
