@@ -22,6 +22,7 @@ class Solution {
                 minValue = number;
             }
         }
+        System.out.println();
         return minValue;
     }
 }
