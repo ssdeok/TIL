@@ -17,11 +17,11 @@ class Solution {
         int answer = 0;
 
 
-//        for (int num = start; num <= end; num+= 1) {
+//        for (int num = start; num <= end; num += 1) {
 //            for (int i = 1; i <= 9; i++) {
 //                answer += num * i;
-//                }
-//         }
+//            }
+//        }
         int num = 0;
         for (int i = start; i<= end; i++) {
                 num += i;
@@ -34,4 +34,4 @@ class Solution {
     }
 }
 // ////////////////////////////////////////////////////////////////////////////////////
-}
+    }

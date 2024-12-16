@@ -2,6 +2,7 @@ package org.example.JavaIntro;
 
 import org.example.JavaIntro.Temp.DefualtModifier;
 
+
 public class Main {
     public static void main(String[] args) {
         PrivateModifier pm = new PrivateModifier();
@@ -23,5 +24,10 @@ public class Main {
 
         System.out.println(dm.publicString);
 //        System.out.println(dm.defualtString);
+
+
+        Dog_2 dt = new Dog_2("jindo", "hodoo");
+        dt.seat();
+        dt.hand();
     }
 }

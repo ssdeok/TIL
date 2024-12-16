@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.JavaIntro.Dog;
+import org.example.JavaIntro.Dog_2;
 import org.example.practice.*;
 
 import static java.lang.Math.*;
@@ -42,6 +43,8 @@ public class Main {
         System.out.println(smallTriangle.circumference);
         System.out.println(smallTriangle.calculateArea());
 
+        System.out.println("@@@@@@@@@@@");
+
         Car myCar = new Car("Avante");
         myCar.increaseSpeed();
         myCar.increaseSpeed();
@@ -50,6 +53,8 @@ public class Main {
         myCar.showInfo();
         myCar.increaseSpeedByAmount(110);
         myCar.showInfo();
+
+        System.out.println("@@@@@@@@@@@@@@");
 
         MP3Player ipod = new MP3Player("ipod");
         ipod.pushPowerButton();
