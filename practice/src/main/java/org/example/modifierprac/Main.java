@@ -24,6 +24,24 @@ public class Main {
         p.study();
 
 
+
+
+        BankAccount myAccount = new BankAccount("abc123");
+        myAccount.deposit(100000);
+        myAccount.getBalance("abc123");
+        myAccount.withdraw(10000, "abc123");
+        myAccount.getBalance("abc123");
+
+        myAccount.getBalance("hahahoho");
+
+        System.out.println();
+
+        String myPassword = "abc";
+        if (BankAccount.validateInitialPassword(myPassword)) {
+            System.out.println("fail.");
+        } else {
+            new BankAccount(myPassword);
+        }
     }
 
 }
