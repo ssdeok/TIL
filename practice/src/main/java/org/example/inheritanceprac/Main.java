@@ -47,5 +47,19 @@ public class Main {
 //
 //        Truck truck = new Truck("ford", 50, 200);
 //        truck.loadBaggage();
+
+        Character basic = new Character("basic");
+        basic.basicAttack();
+        basic.levelUp();
+
+        Warrior warrior = new Warrior("Warrior");
+        System.out.println(warrior.hp);
+
+        System.out.println();
+
+        warrior.basicAttack();
+        warrior.rageUp();
+        warrior.basicAttack();
+
     }
 }

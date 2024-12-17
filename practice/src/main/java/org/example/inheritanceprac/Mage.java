@@ -5,8 +5,8 @@ public class Mage extends Character{
     protected int basicHp = 70;
     protected int mpCount;
 
-    public Mage(String name, int hp) {
-        super(name, hp);
+    public Mage(String name) {
+        super(name);
     }
 
     public int mp(int amount) {
@@ -15,11 +15,4 @@ public class Mage extends Character{
 
     }
 
-    @Override
-    public void levelup(int amount) {
-        level += amount;
-        basicHp += 15;
-        System.out.println(amount + " level is up " + basicHp + " is plus 15");
-
-    }
 }

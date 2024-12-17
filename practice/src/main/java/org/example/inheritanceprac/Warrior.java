@@ -1,25 +1,45 @@
 package org.example.inheritanceprac;
 
+import java.sql.SQLOutput;
+
 public class Warrior extends Character {
-    protected static final int MAX_RAGE = 100;
-    protected int rageCount;
-    protected int basicHp = 120;
+    private static final int MAX_RAGE = 100;
+    private int rageCount;
+//    private int basicHp = 120;
 
-    public Warrior(String name, int hp) {
-        super(name, hp);
+    public Warrior(String name) {
+        super(name);
         this.rageCount = 0;
-    }
-
-    public int rage(int amount) {
-        rageCount += amount;
-        return rageCount;
+        this.hp = 120;
+        this.maxHealth = 120;
     }
 
     @Override
-    public void levelup(int amount) {
-        level += amount;
-        basicHp += 30;
-        System.out.println(amount + " level is up " + basicHp + " is plus 30");
+    public void basicAttack() {
+        System.out.println("attack!");
+        rageCount += 10;
 
+        if (rageCount >= 50) {
+            System.out.println("rage attack!");
+        }
     }
+
+    public void rageUp() {
+        rageCount += 50;
+        System.out.println("rage Up!");
+    }
+
+//    public int rage(int amount) {
+//        rageCount += amount;
+//        return rageCount;
+//    }
+
+    @Override
+    public void levelUp() {
+        super.levelUp();
+        maxHealth += 30;
+        hp += 30;
+//        hp = maxHealth;(풀피)
+    }
+
 }
