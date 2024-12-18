@@ -1,10 +1,9 @@
 package org.example.interfaceprac.character;
 
-public abstract class Character {
-
+public abstract class Character implements DamangeTakable{
     protected int level;
-    protected int hp;
-    protected int maxhp;
+    protected int health;
+    protected int maxHealth;
 
     public Character() {
         this.level = 1;
@@ -14,14 +13,20 @@ public abstract class Character {
     public abstract void attack();
 
     public abstract void attack(Character target);
+//    public abstract void attack(DamangeTakable target);
+
 
     public abstract void takeDamage(int amount);
 
     public abstract void levelUp();
 
 
-    public void showInfo() {
+
+    public void showInfo(){
         System.out.println("level : " + level);
-        System.out.println("hp : " + hp);
+        System.out.println("hp : " + health);
     }
+
+
+
 }

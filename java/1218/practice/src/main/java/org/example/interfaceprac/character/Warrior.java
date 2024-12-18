@@ -1,60 +1,60 @@
 package org.example.interfaceprac.character;
 
-public class Warrior extends Character implements RageUsable {
-
+public class Warrior extends Character implements RageUsable{
     protected int rage;
     protected int maxRage;
 
     public Warrior() {
 
-        this.maxhp = 120;
-        this.hp = 120;
+        this.maxHealth = 120;
+        this.health = 120;
         this.maxRage = 100;
         this.rage = 0;
     }
 
-    static Warrior makeWarrior() {
-        // 추가적인 무언가의 로직
+    static Warrior makeWarrior(){
+//        추가적인 무언가의 로직
         return new Warrior();
     }
 
     @Override
     public void attack() {
-        System.out.println("attack!");
+        System.out.println("attck!");
         increaseRage();
-        if (rage == maxRage) {
+        if (rage == maxRage){
             rageAttack();
         }
     }
 
     @Override
-    // Character가 할 수 있는 것만 할 수 있음
-    // Character를 공격한다는 의미
     public void attack(Character target) {
-        System.out.println("attack" + target);
+//    public void attack(DamangeTakable target) {
+
+            System.out.println("attack" + target);
         target.takeDamage(20);
     }
 
     @Override
     public void takeDamage(int amount) {
-        hp -= amount;
+        health -= amount;
+
     }
 
     @Override
     public void levelUp() {
         level += 1;
-        System.out.println("Level up");
+        System.out.println("level up");
     }
 
     @Override
     public void increaseRage(int amount) {
 //        rage += 10;
-//        if (rage >= maxRage) {
+//        if (rage >= maxRage){
 //            rage = maxRage;
 //        }
         rage = Math.min(maxRage, rage + amount);
-    }
 
+    }
     @Override
     public void increaseRage() {
 
@@ -62,10 +62,12 @@ public class Warrior extends Character implements RageUsable {
 
     }
 
+
     @Override
     public void rageAttack() {
         System.out.println("rage Attack!");
         rage = 0;
+
     }
 
     @Override
@@ -74,4 +76,3 @@ public class Warrior extends Character implements RageUsable {
         System.out.println("rage : " + rage);
     }
 }
-
