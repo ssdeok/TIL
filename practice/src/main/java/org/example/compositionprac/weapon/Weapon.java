@@ -9,11 +9,11 @@ public class Weapon {
         this.stamina = stamina;
     }
 
-    public int getAp() {
-        return ap;
-    }
-
-    public int getStamina() {
-        return stamina;
-    }
+//    public int getAp() {
+//        return ap;
+//    }
+//
+//    public int getStamina() {
+//        return stamina;
+//    }
 }

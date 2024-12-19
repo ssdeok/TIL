@@ -1,14 +1,15 @@
 package org.example.compositionprac.weapon;
 
-public class Sword {
+public class Sword extends Weapon implements SpecialAttackable {
 
-    public Weapon weapon;
 
-    public Sword(Weapon weapon) {
-        this.weapon = weapon;
+    public Sword(int ap, int stamina) {
+        super(ap, stamina);
     }
 
+
+    @Override
     public void specialAttack() {
-        System.out.println("Sword Special Attack " + weapon.getAp());
+        System.out.println("slice!");
     }
 }
