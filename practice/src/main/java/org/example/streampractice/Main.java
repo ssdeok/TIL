@@ -98,6 +98,12 @@ public class Main {
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
 
         // 중복된 단어 제거하고 알파벳 순 정렬하여 리스트 반환
-     
+     List<String> disWords = words.stream()
+             .distinct()
+             .sorted()
+             .toList();
+
+        System.out.println(disWords);
+
     }
 }
