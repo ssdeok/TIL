@@ -105,5 +105,10 @@ public class Main {
 
         System.out.println(disWords);
 
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+        // 각 단어의 길이를 리스트로 변환
+        List<String> lengWords = words.stream()
+                
     }
 }
