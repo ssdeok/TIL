@@ -1,9 +1,12 @@
 package org.example.streampractice;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -108,7 +111,56 @@ public class Main {
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
 
         // 각 단어의 길이를 리스트로 변환
-        List<String> lengWords = words.stream()
-                
+        List<Integer> lengWords = words.stream()
+                .map(String::length)
+                .toList();
+
+        System.out.println(lengWords);
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+            List<Product> products = Arrays.asList(
+                    new Product("notebook", 1200000, "SALE"),
+                    new Product("mouse", 50000, "SALE"),
+                    new Product("keyboard", 150000, "SOLD_OUT"),
+                    new Product("monitor", 350000, "SOLD_OUT"),
+                    new Product("speaker", 400000, "SALE")
+            );
+            // 상품들의 이름 리스트 반환
+            List<String> nameList = products.stream()
+                    .map(Product::getName)
+                    .toList();
+
+            System.out.println(nameList);
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+            // 20만원 이상인 상품들의 이름 리스트 반환
+            List<String> twentyProducts = products.stream()
+                    .filter(p->p.getPrice() >= 200000)
+                    .map(Product::getName)
+                    .toList();
+
+        System.out.println(twentyProducts);
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+        // 판매중인 상품의 가격 합
+       int sumPrice = products.stream()
+                .filter(p->p.getStatus().equals("SALE"))
+                .mapToInt(Product::getPrice)
+                .sum();
+        System.out.println(sumPrice);
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+        // 판매 중이면서 20만원 이상인 상품들의 이름 리스트 반환
+        List<String> twentySaleProducts = products.stream()
+                .filter(p->p.getStatus().equals("SALE"))
+                .filter(p->p.getPrice() >= 200000)
+                .map(Product::getName)
+                .toList();
+        System.out.println(twentySaleProducts);
+
+        }
     }
-}
