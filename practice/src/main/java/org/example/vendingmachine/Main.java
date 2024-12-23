@@ -9,23 +9,38 @@ public class Main {
 //            System.out.println(word1);
 //            System.out.println(word2);
 
-            VendingMachine vend = new VendingMachine();
-            vend.cardpayment();
-            vend.cashpayment();
-
-        System.out.println("@@@@@@@@@@@@@");
-
-            BuyingUser buyingUser = new BuyingUser();
-            buyingUser.cardpayment();
+        Drink cola = new Drink("cola", 1500, 10);
+//        BuyingUser user = new BuyingUser();
+            Manager manager = new Manager();
 
 
 
-        System.out.println("@@@@@@@@@@@@@");
+        // 사용자: 상품 구매
+        cola.displayInfo();
 
-        Manager manager = new Manager();
-        manager.itemManagement();
+        System.out.println("@@@@@@@@@@@@@@");
 
-        System.out.println("@@@@@@@@@@@@@");
+        // 관리자: 재고 추가
+        manager.itemManagement(cola, 5);
+        cola.displayInfo();
+
+        System.out.println("@@@@@@@@@@@@@@");
+
+        // 관리자: 상품 가격 변경
+        manager.settingProductPrice(cola, 1700);
+        cola.displayInfo();
+
+        System.out.println("@@@@@@@@@@@@@@");
+
+        // 관리자: 매출 확인
+        manager.recordSale(3000);
+        manager.checkSales();
+
+
+
+
+
+;
 
         Drink drink1 = new Drink("cola", 2500, 15);
         Drink drink2 = new Drink("fanta", 1500, 30);
