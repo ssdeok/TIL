@@ -1,4 +1,4 @@
-package org.example.vendingmachine;
+package org.example.vendingmachine.function;
 
 public interface CashPayment {
 

@@ -120,11 +120,11 @@ public class Main {
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@");
 
             List<Product> products = Arrays.asList(
-                    new Product("notebook", 1200000, "SALE"),
-                    new Product("mouse", 50000, "SALE"),
-                    new Product("keyboard", 150000, "SOLD_OUT"),
-                    new Product("monitor", 350000, "SOLD_OUT"),
-                    new Product("speaker", 400000, "SALE")
+//                    new Product("notebook", 1200000, "SALE"),
+//                    new Product("mouse", 50000, "SALE"),
+//                    new Product("keyboard", 150000, "SOLD_OUT"),
+//                    new Product("monitor", 350000, "SOLD_OUT"),
+//                    new Product("speaker", 400000, "SALE")
             );
             // 상품들의 이름 리스트 반환
             List<String> nameList = products.stream()

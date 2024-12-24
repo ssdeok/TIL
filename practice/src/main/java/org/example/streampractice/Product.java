@@ -1,6 +1,6 @@
 package org.example.streampractice;
 
-public class Product {
+public abstract class Product {
     private String name;
     private int price;
     private String status;
@@ -36,4 +36,5 @@ public class Product {
     }
 
 
+    public abstract void displayInfo();
 }

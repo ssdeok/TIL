@@ -16,7 +16,7 @@ public class MP3Player {
             return this.turnOff();
         }else {
             return this.turnOn();
-     }
+         }
     }
 
     //- 전원 켜기 - 전원을 키고, 볼륨을 40으로 설정
