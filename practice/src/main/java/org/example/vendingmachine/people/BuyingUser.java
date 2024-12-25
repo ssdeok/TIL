@@ -1,20 +1,22 @@
 package org.example.vendingmachine.people;
 
-import org.example.vendingmachine.function.CardPayment;
-import org.example.vendingmachine.function.CashPayment;
+import org.example.vendingmachine.VendingMachine;
+import org.example.vendingmachine.function.Payment;
+import org.example.vendingmachine.products.Product;
 
-public class BuyingUser implements CardPayment, CashPayment {
+public class BuyingUser {
+    private VendingMachine vendingMachine;
 
-    // 일반 사용자가 상품을 구매하는 로직
-    public void purchaseProducts() {
-
+    public BuyingUser(VendingMachine vendingMachine) {
+        this.vendingMachine = vendingMachine;
     }
 
-
-    // 카드 결제 처리
-    @Override
-    public void cardpayment() {
-
+    // 상품 구매(이름)
+    public void buyProduct(String productName, Payment payment, int quantity) {
+        Product product = vendingMachine.selectProduct(productName);
+        if (product != null) {
+            vendingMachine.processPayment(payment, product, quantity);
+        }
     }
 
     // 잔액 확인
@@ -22,10 +24,6 @@ public class BuyingUser implements CardPayment, CashPayment {
 //
 //    }
 
-    @Override
-    public void cashpayment() {
-
-    }
 
 //    private void calculateChange() {
 //        System.out.println("거스름돈 계산");
