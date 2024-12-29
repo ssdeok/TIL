@@ -47,6 +47,18 @@ public class PostService {
 //        if (post == null){
 //            throw new IllegalArgumentException("없는 id입니다");
 //        }
+
+//        String newTitle = updatedPost.getTitle();
+//        String newContent = updatedPost.getContent();
+//
+//        if (newTitle == null || newTitle.isBlank()) {
+//            throw new RuntimeException("title을 입력하시오.");
+//        }
+//
+//        if (newContent == null || newContent.isBlank()) {
+//            throw new IllegalArgumentException("content를 입력하시오.");
+//        }
+
         checkPostIsNull(post);
 
         validatePostData(updatedPost);
@@ -56,6 +68,10 @@ public class PostService {
 
     public void deletePost(Long id) {
         Post post = postRepository.findById(id);
+//        if (post == null) {
+//            throw new IllegalArgumentException("없는 id입니다.");
+//        }
+
         checkPostIsNull(post);
 
         postRepository.delete(post);
