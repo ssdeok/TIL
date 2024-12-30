@@ -9,7 +9,7 @@ import java.util.List;
 @RequestMapping("v3/products")
 public class ProductApi3 {
 
-    List<Product> products = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
     private Long id = 0L;
 
     {

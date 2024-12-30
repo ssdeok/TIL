@@ -1,6 +1,7 @@
 package com.example.demo.mysite.postMVC;
 
 import com.example.demo.mysite.Post;
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,29 +9,29 @@ import java.util.List;
 
 @Repository
 public class PostRepository {
-    private List<Post> posts = new ArrayList<>(); // 우리의 게시판
+    private List<Post> posts = new ArrayList<>();
     private Long id = 0L;
 
+
     // 저장. create 그 자체.
-    public Post save(Post newPost) {
+    public Post save(Post newPost){
 //        String title = newPost.getTitle();
 //        String content = newPost.getContent();
-
+//
 //        Post post = new Post(++id, title, content);
 
         Post post = new Post(++id, newPost.getTitle(), newPost.getContent());
         posts.add(post);
         return post;
-        // 여기까지가 레퍼지토리 / 생성
     }
 
-    public List<Post> findAll() {
+    public List<Post> findAll(){
         return posts;
     }
 
-    public Post findById(Long id) {
+    public Post findById(Long id){
         for (Post post : posts) {
-            if (post.getId().equals(id)) {
+            if (post.getId().equals(id)){
                 return post;
             }
         }
@@ -54,5 +55,5 @@ public class PostRepository {
     public void delete(Post post) {
         posts.remove(post);
     }
-}
 
+}
