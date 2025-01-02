@@ -1,18 +1,18 @@
-package com.example.demo.myjpasitev4;
-
+package com.example.demo.myjpasitev5;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PostJpaV4 {
+public class PostV5 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,12 +20,14 @@ public class PostJpaV4 {
 
     private String title;
     private String content;
+    private String author;
 
-    public PostJpaV4 update(String title, String content) {
+    @Builder
+    public PostV5(String title, String content, String author) {
         this.title = title;
         this.content = content;
-
-        return this;
+        this.author = author;
     }
+
 
 }

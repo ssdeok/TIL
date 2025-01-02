@@ -1,21 +1,18 @@
-package com.example.demo.myjpasitev4;
+package com.example.demo.myjpasitev5;
 
-
+import com.example.demo.myjpasitev4.ApiResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/jpa/v5/posts")
 @RequiredArgsConstructor
-public class PostControllerJpaV5 {
-    private final PostServiceJpaV5 postServiceJpaV5;
+public class PostControllerV5 {
+    private final PostServiceV5 postServiceV5;
 
     @PostMapping
-    public PostJpaV5 createPost(@RequestBody PostJpaV5 newPost) {
-        return postServiceJpaV5.createPost(newPost);
-    }
-
+    public ResponseEntity<ApiResponse<>>
 }
