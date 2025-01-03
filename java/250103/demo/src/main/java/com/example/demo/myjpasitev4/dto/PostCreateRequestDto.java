@@ -11,7 +11,6 @@ import org.hibernate.validator.constraints.Length;
 @Getter
 @NoArgsConstructor
 public class PostCreateRequestDto {
-
     @NotBlank(message = "제목은 필수 입력 값입니다.")
     @Length(max = 20, message = "제목은 20자 이하여야 합니다.")
     private String title;
@@ -23,14 +22,12 @@ public class PostCreateRequestDto {
     @Length(min = 2, max = 10, message = "작성자 이름은 2자 이상 10자 이하여야 합니다.")
     private String author;
 
-    public PostV4 toEntity() {
+    public PostV4 toEntity(){
         return PostV4.builder()
                 .title(this.title)
                 .content(this.content)
                 .author(this.author)
                 .build();
-        // return new PostV4(title, content, author);
+//        return new PostV4(title, content, author);
     }
-
-
 }

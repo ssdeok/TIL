@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional(readOnly = true)
@@ -19,35 +20,32 @@ public class PostServiceV4 {
 
     @Transactional
     public PostResponseDto createPost(PostCreateRequestDto requestDto){
-
+        
 //        PostV4 transientPost = requestDto.toEntity();
-//        PostV4 managedPost = postRepositoryV4.save(transientPost);
+//        PostV4 managedPost =  postRepositoryV4.save(transientPost);
 
-    // requestDto => post
-        PostV4 post = postRepositoryV4.save(requestDto.toEntity());
+        PostV4 post =  postRepositoryV4.save(requestDto.toEntity());
 
         return PostResponseDto.from(post);
-        // 위에 from으로 아래것들을 대신 표현
 //        return new PostResponseDto(post.getId(), post.getTitle(), post.getContent(), post.getAuthor());
-
     }
-
-    public List<PostListResponseDto> readPosts() {
-         return postRepositoryV4.findAll().stream()
+    
+    public List<PostListResponseDto> readPosts(){
+        return postRepositoryV4.findAll().stream()
                 .map(PostListResponseDto::from)
                 .toList();
-//                .map(post -> PostListResponseDto.from(post))
+//                .map((post) -> PostListResponseDto.from(post))
     }
 
-    public PostResponseDto readPostById(Long id) {
+    public PostResponseDto readPostById(Long id){
         PostV4 post = postRepositoryV4.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException());
         return PostResponseDto.from(post);
     }
 
     @Transactional
-    public PostResponseDto updatePost(Long id, PostUpdateRequestDto requestDto) {
-    // 하나 가져오자 -> 걔를 수정하자 -> save 하자
+    public PostResponseDto updatePost(Long id, PostUpdateRequestDto requestDto){
+//                하나 가져오자 -> 걔를 수정하자 -> save하자
         PostV4 post = postRepositoryV4.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException());
         post.update(requestDto);
@@ -55,7 +53,7 @@ public class PostServiceV4 {
     }
 
     @Transactional()
-    public void deletePost(Long id) {
+    public void deletePost(Long id){
         // 하나 가져오자 -> 걔를 삭제하자.
         PostV4 post = postRepositoryV4.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException());

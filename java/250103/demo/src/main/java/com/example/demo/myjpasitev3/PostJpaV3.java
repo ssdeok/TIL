@@ -1,18 +1,18 @@
-package com.example.demo.myjpasitev5;
+package com.example.demo.myjpasitev3;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PostV5 {
+public class PostJpaV3 {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,14 +20,14 @@ public class PostV5 {
 
     private String title;
     private String content;
-    private String author;
 
-    @Builder
-    public PostV5(String title, String content, String author) {
+
+
+    // title, content에 대한 setter
+    public PostJpaV3 update(String title, String content){
         this.title = title;
         this.content = content;
-        this.author = author;
+
+        return this;
     }
-
-
 }
