@@ -1,6 +1,5 @@
 package com.example.demo.myjpasitev4;
 
-import com.example.demo.BaseTimeEntity;
 import com.example.demo.myjpasitev4.dto.PostUpdateRequestDto;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -8,13 +7,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
-
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PostV4 extends BaseTimeEntity {
-
+public class PostV4 extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,10 +27,10 @@ public class PostV4 extends BaseTimeEntity {
         this.author = author;
     }
 
-    // 비즈니스 로직스러운 setter
-    public PostV4 update(PostUpdateRequestDto requestDto) {
+    public PostV4 update(PostUpdateRequestDto requestDto){
         this.title = requestDto.getTitle();
         this.content = requestDto.getContent();
         return this;
+
     }
 }

@@ -8,28 +8,21 @@ import java.time.LocalDateTime;
 
 @Getter
 @Builder
-public class PostResponseDto {
+public class PostListResponseDto {
+    private final Long id;
 
-        private final Long id;
-
-        private final String title;
-        private final String content;
-        private final String author;
+    private final String title;
     private final LocalDateTime createdAt;
     private final LocalDateTime updatedAt;
 
-    public static PostResponseDto from(PostV4 entity) {
-
-        return PostResponseDto.builder()
+    public static PostListResponseDto from(PostV4 entity) {
+        return PostListResponseDto.builder()
                 .id(entity.getId())
                 .title(entity.getTitle())
-                .content(entity.getContent())
-                .author(entity.getAuthor())
                 .createdAt(entity.getCreatedAt())
                 .updatedAt(entity.getUpdatedAt())
                 .build();
-//        return new PostResponseDto(entity.getId(), entity.getTitle(), entity.getContent(), entity.getAuthor());
+
 
     }
 }
-
