@@ -1,15 +1,37 @@
 package com.example.jpaproject.myuserentity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 
 //@Repository
 public interface UserRepository extends JpaRepository<PostUser, Long> {
 
+//    @Query("SELECT u FROM PostUser ")
+
+    // 특정 닉네임 조회
+    List<PostUser> findByNickname(String nickname);
+//
+    // 특정 나이 조회
+    List<PostUser> findByAge(int age);
+//
+    // 활성화된 사용자 조회
+    List<PostUser> findByIsActiveTrue();
+//
+    // 이메일이 특정 도메인으로 끝나는 사용자 조회
+    List<PostUser> findByEmailEndingWith(String domain);
+//
+    // 특정 나이 이후의 비활성 사용자 조회
+    List<PostUser> findByAgeGreaterThanAndIsActiveFalse(int age);
 
 //    private List<PostUser> posts = new ArrayList<>();
 //    private Long id = 0L;

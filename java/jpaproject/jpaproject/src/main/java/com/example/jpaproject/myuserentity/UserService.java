@@ -4,10 +4,12 @@ import com.example.jpaproject.myuserentity.dto.UserCreateRequestDto;
 import com.example.jpaproject.myuserentity.dto.UserListResponseDto;
 import com.example.jpaproject.myuserentity.dto.UserResponseDto;
 import com.example.jpaproject.myuserentity.dto.UserUpdateRequestDto;
+import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Member;
 import java.util.List;
 
 @Service
@@ -16,8 +18,34 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
+    public List<PostUser> findByNickname(String nickname) {
+        return userRepository.findByNickname(nickname);
+    }
+//
+    public List<PostUser> findByAge(int age) {
+        return userRepository.findByAge(age);
+    }
+//
+    public List<PostUser> findActiveUsers() {
+        return userRepository.findByIsActiveTrue();
+    }
+//
+    public List<PostUser> findByEmailDomain(String domain) {
+        return userRepository.findByEmailEndingWith(domain);
+    }
+//
+    public List<PostUser> findInactiveUsersByAge(int age) {
+        return userRepository.findByAgeGreaterThanAndIsActiveFalse(age);
+    }
+
     @Transactional
     public UserResponseDto createPost(UserCreateRequestDto requestDto) {
+
+//        requestDto.getNickname();
+//               if( userRepository.existsbynickname(requestDto.getNickname())){
+//                    throw new Duplicate
+//        }
+
         PostUser postUser = userRepository.save(requestDto.toEntity());
         return UserResponseDto.from(postUser);
 
