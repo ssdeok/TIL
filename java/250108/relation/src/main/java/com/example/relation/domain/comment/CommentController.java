@@ -19,18 +19,16 @@ public class CommentController {
     public ResponseEntity<ApiResponse<CommentResponseDto>> createComment(
             @PathVariable Long postId,
             @Valid @RequestBody CommentRequestDto requestDto
-    ) {
+    ){
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(
                         ApiResponse.ok(
-                                "댓글이 정상적으로 작성되었습니다.",
+                                "댓글이 정상적으로 작성되었습니다",
                                 "CREATED",
                                 commentService.createComment(postId, requestDto)
                         )
                 );
-
-
     }
 
     @PutMapping("/{commentId}")
@@ -38,7 +36,9 @@ public class CommentController {
             @PathVariable Long postId,
             @PathVariable Long commentId,
             @RequestBody CommentRequestDto requestDto){
-    return ResponseEntity.ok(ApiResponse.ok(commentService.updateComment(postId, commentId, requestDto)));
+        return ResponseEntity.ok(ApiResponse.ok(commentService.updateComment(postId, commentId, requestDto)));
 
     }
+
+
 }

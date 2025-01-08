@@ -19,7 +19,8 @@ public class CommentService {
     @Transactional
     public CommentResponseDto createComment(Long postId, CommentRequestDto requestDto) {
         // 댓글 생성
-       Post post = postRepository.findById(postId)
+
+        Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new ResourceNotFoundException());
 
         Comment comment = requestDto.toEntity(post);
@@ -34,6 +35,6 @@ public class CommentService {
 
         comment.update(requestDto);
         return CommentResponseDto.from(comment);
-    }
 
+    }
 }

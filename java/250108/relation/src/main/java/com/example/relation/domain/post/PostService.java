@@ -15,9 +15,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 public class PostService {
     private final PostRepository postRepository;
-    // DI를 하는것이기때문에 생성자가 필요. @RequiredArgsConstructor 이걸로 만듬
     private final CommentRepository commentRepository;
-    
 
     @Transactional
     public PostResponseDto createPost(PostCreateRequestDto requestDto) {
@@ -34,16 +32,18 @@ public class PostService {
     public PostWithCommentResponseDto readPostById(Long id){
 
         Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException());
-//        comments 특정 post id를 가지고 있는 comments를 읽고 싶다
+//        omments 특정 post id를 가지고 있는 comments
         List<Comment> comments = commentRepository.findByPostId(id);
+
 
         return PostWithCommentResponseDto.from(post, comments);
     }
 
-    public PostWithCommentResponseDtoV2 readPostByIdV2(Long id) {
-        // post, comment를 한번에 가져오고 싶다.
-       Post post = postRepository.findByIdWithComment(id)
+    public PostWithCommentResponseDtoV2 readPostByIdV2(Long id){
+//        post, comment를 한번에 가져오고 싶다.
+        Post post = postRepository.findByIdWithComment(id)
                 .orElseThrow(() -> new ResourceNotFoundException());
+
         return PostWithCommentResponseDtoV2.from(post);
     }
 

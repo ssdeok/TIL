@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class Post extends BaseTimeEntity {
 
     private String author;
 
-    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "post", fetch = FetchType.EAGER)
     private List<Comment> comments;
 
     @Builder
@@ -36,8 +37,6 @@ public class Post extends BaseTimeEntity {
         this.content = content;
         this.author = author;
     }
-
-
 
     public Post update(PostUpdateRequestDto requestDto){
         this.title = requestDto.getTitle();

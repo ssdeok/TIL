@@ -12,7 +12,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("SELECT p FROM Post p LEFT JOIN p.comments WHERE p.id = :id")
     Optional<Post> findByIdWithComment(@Param("id") Long id);
 
-    @Query("SELECT p FROM Post p LEFT JOIN FETCH  p.comments WHERE p.id = :id")
+    @Query("SELECT p FROM Post p LEFT JOIN FETCH p.comments WHERE p.id = :id")
     Optional<Post> findByIdWithCommentFetch(@Param("id") Long id);
 
     @Query("SELECT p FROM Post p LEFT JOIN FETCH  p.comments")
@@ -22,6 +22,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("SELECT p FROM Post p")
     List<Post> findAllWithCommentEntityGraph();
 
-    //    @EntityGraph(attributePaths = {"comments"})
-    //    List<Post> findAllWithComments();
+
+//    @EntityGraph(attributePaths = {"comments"})
+//    List<Post> findAllWithComments();
 }

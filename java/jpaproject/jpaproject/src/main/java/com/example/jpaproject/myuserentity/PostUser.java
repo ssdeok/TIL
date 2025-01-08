@@ -1,10 +1,7 @@
 package com.example.jpaproject.myuserentity;
 
 import com.example.jpaproject.myuserentity.dto.UserUpdateRequestDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,6 +15,10 @@ public class PostUser extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "postuser_id")
+    private Team team;
 
     private String username;
     private String email;
@@ -34,6 +35,7 @@ public class PostUser extends BaseTimeEntity {
         this.age = age;
         this.isActive = true;
     }
+
 
     public PostUser update(String username, String email, String nickname, int age) {
 
@@ -54,4 +56,6 @@ public class PostUser extends BaseTimeEntity {
         this.isActive = requesDTto.isActive();
         return this;
     }
+
+
 }
