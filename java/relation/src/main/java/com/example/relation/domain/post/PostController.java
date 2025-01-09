@@ -1,6 +1,7 @@
 package com.example.relation.domain.post;
 
 import com.example.relation.domain.post.dto.*;
+import com.example.relation.domain.tag.dto.TagRequestDto;
 import com.example.relation.global.response.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class PostController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(
-                        ApiResponse.ok("게시글이 성공적으로 작성되었습니다","CREATED",
+                        ApiResponse.ok("게시글이 성공적으로 작성되었습니다", "CREATED",
                                 postService.createPost(requestDto)
                         )
                 );
@@ -61,6 +62,43 @@ public class PostController {
 
     }
 
+    @GetMapping("/comment-count")
+    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostsWithCommentCount() {
+        return ResponseEntity.ok(ApiResponse.ok(
+                postService.readPostsWithCommentCount()
+        ));
+    }
+
+    @GetMapping("/comment-count-dto")
+    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostWithCommentCountDto() {
+        return ResponseEntity.ok(ApiResponse.ok(
+                postService.readPostsWithCommentCount()
+        ));
+    }
+
+    // post와 tag를 가지고 연결시켜주기.
+    @PostMapping("{id}/tags")
+    public void addTagToPost(
+            @PathVariable Long id,
+            @RequestBody TagRequestDto requestDto
+    ) {
+        postService.addTagToPost(id, requestDto);
+    }
+
+    // 게시글을 댓글과 태그들과 함께 조회.
+    @GetMapping("/{id}/detail")
+    public ResponseEntity<ApiResponse<PostWithCommentAndTagResponseDto>> readPostsByIdWithCommentAndTag(@PathVariable Long id) {
+        return ResponseEntity.ok(ApiResponse.ok(
+                postService.readPostsByIdWithCommentAndTag(id)
+        ));
+    }
+
+    @GetMapping("/{id}/detail/v2")
+    public ResponseEntity<ApiResponse<PostWithCommentAndTagResponseDtoV2>> readPostsByIdWithCommentAndTagV2(@PathVariable Long id) {
+        return ResponseEntity.ok(ApiResponse.ok(
+                postService.readPostsByIdWithCommentAndTagV2(id)
+        ));
+    }
 }
 
 

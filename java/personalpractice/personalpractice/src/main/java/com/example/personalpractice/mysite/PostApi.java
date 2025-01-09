@@ -1,5 +1,6 @@
 package com.example.personalpractice.mysite;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,12 +13,21 @@ public class PostApi {
         private Long id = 0L;
 
     @PostMapping
-    public Post createPost() {
+    @ResponseStatus(HttpStatus.CREATED)
+    public Post createPost(@RequestBody Post newPost) {
+        String title = newPost.getTitle();
+        String content = newPost.getContent();
 
-        Post post = new Post(++id, "제목", "내용");
+        if (title == null || title.isBlank()) {
+            throw new RuntimeException("title을 입력하시오.");
+        }
 
+        if (content == null || content.isBlank()) {
+            throw new IllegalArgumentException("content를 입력하시오.");
+        }
+
+        Post post = new Post(++id, title, content);
         posts.add(post);
-
         return post;
     }
 
@@ -54,11 +64,23 @@ public class PostApi {
     }
 
     @PutMapping("/{id}")
-    public Post updatePost(@PathVariable Long id) {
+    public Post updatePost(@PathVariable Long id, @RequestBody Post updatedPost) {
+
+        String newtitle = updatedPost.getTitle();
+        String newContent = updatedPost.getContent();
+
+        if (newtitle == null || newtitle.isBlank()) {
+            throw new RuntimeException("title을 입력하시오");
+        }
+
+        if (newContent == null || newContent.isBlank()) {
+            throw new IllegalArgumentException("content를 입력하시오");
+        }
+
         for (Post post : posts) {
             if (post.getId().equals(id)) {
-                post.setTitle("수정된 제목");
-                post.setContent("수정된 내용");
+                post.setTitle(newtitle);
+                post.setContent(newContent);
                 return post;
             }
         }

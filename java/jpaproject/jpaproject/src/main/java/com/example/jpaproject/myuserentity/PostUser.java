@@ -17,7 +17,7 @@ public class PostUser extends BaseTimeEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "postuser_id")
+    @JoinColumn(name = "team_id")
     private Team team;
 
     private String username;
@@ -36,6 +36,9 @@ public class PostUser extends BaseTimeEntity {
         this.isActive = true;
     }
 
+    public void setTeam(Team team) {
+        this.team = team;
+    }
 
     public PostUser update(String username, String email, String nickname, int age) {
 
