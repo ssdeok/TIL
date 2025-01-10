@@ -22,7 +22,7 @@ public class PostController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(
-                        ApiResponse.ok("게시글이 성공적으로 작성되었습니다", "CREATED",
+                        ApiResponse.ok("게시글이 성공적으로 작성되었습니다","CREATED",
                                 postService.createPost(requestDto)
                         )
                 );
@@ -63,24 +63,24 @@ public class PostController {
     }
 
     @GetMapping("/comment-count")
-    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostsWithCommentCount() {
+    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostsWithCommentCount(){
         return ResponseEntity.ok(ApiResponse.ok(
                 postService.readPostsWithCommentCount()
         ));
     }
 
     @GetMapping("/comment-count-dto")
-    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostWithCommentCountDto() {
+    public ResponseEntity<ApiResponse<List<PostListWithCommentCountResponseDto>>> readPostsWithCommentCountDto(){
         return ResponseEntity.ok(ApiResponse.ok(
-                postService.readPostsWithCommentCount()
+                postService.readPostsWithCommentCountDto()
         ));
     }
 
     // post와 tag를 가지고 연결시켜주기.
-    @PostMapping("{id}/tags")
+    @PostMapping("/{id}/tags")
     public void addTagToPost(
             @PathVariable Long id,
-            @RequestBody TagRequestDto requestDto
+            @Valid @RequestBody TagRequestDto requestDto
     ) {
         postService.addTagToPost(id, requestDto);
     }
@@ -100,11 +100,19 @@ public class PostController {
         ));
     }
 
+    @GetMapping("/detail")
+    public ResponseEntity<ApiResponse<List<PostWithCommentAndTagResponseDtoV2 >>> readPostsDetail(){
+        return ResponseEntity.ok(ApiResponse.ok(
+                postService.readPostsDetail()
+        ));
+    }
+
     @GetMapping("/tags")
-    public ResponseEntity<ApiResponse<List<PostWithCommentAndTagResponseDtoV2>>> readPostsByTag(@RequestParam String tag) {
+    public ResponseEntity<ApiResponse<List<PostWithCommentAndTagResponseDtoV2>>> readPostsByTag(@RequestParam String tag){
         return ResponseEntity.ok(ApiResponse.ok(
                 postService.readPostsByTag(tag)
         ));
+
     }
 }
 

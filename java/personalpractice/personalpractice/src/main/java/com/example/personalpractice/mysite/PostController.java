@@ -6,10 +6,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/jpa/posts")
 public class PostController {
+    // DI
+    private final PostService postService;
 
-    private PostService postService = new PostService();
+    public PostController(PostService postService) {
+        this.postService = postService;
+    }
+
+    //    private PostService postService = new PostService();
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
