@@ -81,13 +81,13 @@ public class PostService {
 
     }
 
-    public void deletePost(Long id) {
-        Post post = postRepository.findById(id);
-        if (post == null) {
-            throw new IllegalArgumentException("없는 id입니다");
-        }
-        postRepository.delete(post);
-    }
+//    public void deletePost(Long id) {
+//        Post post = postRepository.findById(id);
+//        if (post == null) {
+//            throw new IllegalArgumentException("없는 id입니다");
+//        }
+//        postRepository.delete(post);
+//    }
 }
 
 

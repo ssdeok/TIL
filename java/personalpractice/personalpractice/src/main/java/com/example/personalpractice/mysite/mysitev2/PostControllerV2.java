@@ -1,19 +1,21 @@
 package com.example.personalpractice.mysite.mysitev2;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/jpa/posts")
+@RequestMapping("/jpa/v2/posts")
+@RequiredArgsConstructor
 public class PostControllerV2 {
     // DI
     private final PostServiceV2 postServiceV2;
 
-    public PostControllerV2(PostServiceV2 postServiceV2) {
-        this.postServiceV2 = postServiceV2;
-    }
+//    public PostControllerV2(PostServiceV2 postServiceV2) {
+//        this.postServiceV2 = postServiceV2;
+//    }
 
     //    private PostService postService = new PostService();
 
