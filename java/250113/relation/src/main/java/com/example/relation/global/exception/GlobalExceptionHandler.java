@@ -15,13 +15,13 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-
     @ExceptionHandler(FileUploadException.class)
     public ResponseEntity<ApiResponse<Void>> handleFileUpload(FileUploadException ex) {
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(ApiResponse.error(ex.getMessage(), "INTERNAL_SERVER_ERROR"));
     }
+
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiResponse<Void>> handleUserNotFound(ResourceNotFoundException ex) {

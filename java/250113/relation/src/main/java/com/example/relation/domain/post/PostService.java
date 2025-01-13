@@ -25,7 +25,6 @@ import java.util.List;
 @Transactional(readOnly = true)
 public class PostService {
     private final PostRepository postRepository;
-    // DI를 하는것이기때문에 생성자가 필요. @RequiredArgsConstructor 이걸로 만듬
     private final CommentRepository commentRepository;
     private final TagRepository tagRepository;
     private final PostTagRepository postTagRepository;
@@ -46,16 +45,18 @@ public class PostService {
     public PostWithCommentResponseDto readPostById(Long id){
 
         Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException());
-//        comments 특정 post id를 가지고 있는 comments를 읽고 싶다
+//        omments 특정 post id를 가지고 있는 comments
         List<Comment> comments = commentRepository.findByPostId(id);
+
 
         return PostWithCommentResponseDto.from(post, comments);
     }
 
-    public PostWithCommentResponseDtoV2 readPostByIdV2(Long id) {
-        // post, comment를 한번에 가져오고 싶다.
-       Post post = postRepository.findByIdWithComment(id)
+    public PostWithCommentResponseDtoV2 readPostByIdV2(Long id){
+//        post, comment를 한번에 가져오고 싶다.
+        Post post = postRepository.findByIdWithComment(id)
                 .orElseThrow(() -> new ResourceNotFoundException());
+
         return PostWithCommentResponseDtoV2.from(post);
     }
 
@@ -74,11 +75,11 @@ public class PostService {
         postRepository.delete(post);
     }
 
-    public List<PostListWithCommentCountResponseDto> readPostsWithCommentCount() {
+    public List<PostListWithCommentCountResponseDto> readPostsWithCommentCount(){
         List<Object[]> results = postRepository.findAllWithCommentCount();
         return results.stream()
                 .map(
-                        result ->{
+                        result -> {
                             Post post = (Post) result[0];
                             Long CommentCount = (Long) result[1];
                             return new PostListWithCommentCountResponseDto(
@@ -91,70 +92,90 @@ public class PostService {
                 .toList();
     }
 
-    public List<PostListWithCommentCountResponseDto> readPostWithCommentCountDto() {
+    public List<PostListWithCommentCountResponseDto> readPostsWithCommentCountDto(){
         return postRepository.findAllWithCommentCountDTO();
     }
 
     @Transactional
-    public void addTagToPost(Long id, TagRequestDto requestDto) {
+    public void addTagToPost(Long id, TagRequestDto requestDto){
         Post post = postRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException());
-
-        Tag tag = tagRepository.findByName(requestDto.getName())
                 .orElseThrow(() -> new ResourceNotFoundException());
 
+//        Tag tag = tagRepository.findByName(requestDto.getName())
+//                .orElseThrow(() -> new ResourceNotFoundException());
+
+        Tag tag = tagRepository.findByName(requestDto.getName())
+                .orElseGet(() -> {
+
+                    Tag newTag = new Tag(requestDto.getName());
+                    return tagRepository.save(newTag);
+//                    return tagRepository.save(requestDto.toEntity());
+                });
 
         PostTag postTag = new PostTag();
 
         postTag.addTag(tag);
-        postTag.addPost(post);
 
+        postTag.addPost(post);
         post.getPostTags().add(postTag);
 
         postTagRepository.save(postTag);
+
     }
 
-    public PostWithCommentAndTagResponseDto readPostsByIdWithCommentAndTag(Long id) {
+    public PostWithCommentAndTagResponseDto readPostsByIdWithCommentAndTag(Long id){
 
-//        Post post = postRepository.findByIdWithCommentAndTag(id)
-//                .orElseThrow(() -> new ResourceNotFoundException());
+
 
         Post postWithTag = postRepository.findByIdWithTag(id)
                 .orElseThrow(() -> new ResourceNotFoundException());
         List<Comment> comments = commentRepository.findByPostId(id);
 
+
         return PostWithCommentAndTagResponseDto.from(postWithTag, comments);
     }
 
-    public PostWithCommentAndTagResponseDtoV2 readPostsByIdWithCommentAndTagV2(Long id) {
+    public PostWithCommentAndTagResponseDtoV2 readPostsByIdWithCommentAndTagV2(Long id){
         Post post = postRepository.findByIdWithCommentAndTag(id)
                 .orElseThrow(() -> new ResourceNotFoundException());
 
         return PostWithCommentAndTagResponseDtoV2.from(post);
     }
 
-    public List<PostWithCommentAndTagResponseDtoV2> readPostsByTag(String tag) {
-       return postRepository.findAllByTagName(tag).stream().map(
-               PostWithCommentAndTagResponseDtoV2::from
-       ) .toList();
+    public List<PostWithCommentAndTagResponseDtoV2 > readPostsDetail(){
+
+        return postRepository.findWithCommentAndTag().stream()
+                .map(PostWithCommentAndTagResponseDtoV2 ::from)
+                .toList();
     }
 
-    public List<PostListResponseDto> readPostsWithPage(Pageable pageable) {
-       return postRepository.findAll(pageable).getContent()
-               .stream().map(
-                PostListResponseDto::from
+    public List<PostWithCommentAndTagResponseDtoV2> readPostsByTag(String tag){
+        return postRepository.findAllByTagName(tag).stream().map(
+                PostWithCommentAndTagResponseDtoV2::from
                 ).toList();
+    }
+
+    public List<PostListResponseDto> readPostsWithPage(Pageable pageable){
+        return postRepository.findAll(pageable).getContent()
+                .stream().map(
+                        PostListResponseDto::from
+                        ).toList();
 
     }
 
     public PostListWithPageResponseDto readPostWithPageDetail(Pageable pageable) {
-      return PostListWithPageResponseDto.from(
-              postRepository.findAll(pageable)
-      );
+
+//        형태가 같은 것
+//        postRepository.findAll();
+//        postRepository.findAll(pageable).getContent();
+
+        return PostListWithPageResponseDto.from(
+                postRepository.findAll(pageable)
+        );
     }
 
     public List<PostWithCommentResponseDtoV2> readPostsWithCommentPage(Pageable pageable) {
-        return postRepository.findPostsWithCommnentPage(pageable)
+        return postRepository.findPostsWithCommentPage(pageable)
                 .getContent().stream().map(
                         PostWithCommentResponseDtoV2::from
                 ).toList();
@@ -163,7 +184,7 @@ public class PostService {
     @Transactional
     public PostWithImageResponseDto createPostWithImage(
             PostCreateRequestDto requestDto,
-            MultipartFile image) {
+            MultipartFile image){
 
         String imageUrl = null;
 
@@ -177,28 +198,9 @@ public class PostService {
         return PostWithImageResponseDto.from(
                 postRepository.save(post)
         );
+
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

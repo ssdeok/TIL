@@ -29,11 +29,11 @@ public class Post extends BaseTimeEntity {
     private String imageUrl;
 
 
-
     @BatchSize(size = 100)
-    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
     private List<Comment> comments;
 
+//    @BatchSize(size = 100)
     @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
     private List<PostTag> postTags;
 
@@ -43,8 +43,6 @@ public class Post extends BaseTimeEntity {
         this.content = content;
         this.author = author;
     }
-
-
 
     public Post update(PostUpdateRequestDto requestDto){
         this.title = requestDto.getTitle();
