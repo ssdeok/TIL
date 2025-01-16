@@ -1,10 +1,12 @@
 package com.example.relation.global.config;
 
+import com.example.relation.global.security.SecurityPatchConfig;
 import com.example.relation.global.security.handler.CustomAccessDeniedHandler;
 import com.example.relation.global.security.handler.JwtAuthenticationEntryPoint;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -39,7 +41,11 @@ public class SecurityConfig{
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**").permitAll()
+                        // auth는 다 돼
+                        .requestMatchers("/auth/**", "/error", "/images/**").permitAll()
+                        // 토큰이 없어도 데이터를 받아올 수 있게 하는 코드
+                        .requestMatchers(HttpMethod.GET, SecurityPatchConfig.PUBLIC_GET_URLS).permitAll()
+                        // 나머지는 안돼
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)

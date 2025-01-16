@@ -10,6 +10,8 @@ import com.example.relation.domain.post.repository.PostTagRepository;
 import com.example.relation.domain.tag.Tag;
 import com.example.relation.domain.tag.TagRepository;
 import com.example.relation.domain.tag.dto.TagRequestDto;
+import com.example.relation.domain.user.dto.response.Post2ResponseDto;
+import com.example.relation.domain.user.entity.User;
 import com.example.relation.global.common.service.FileService;
 import com.example.relation.global.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -30,8 +32,13 @@ public class PostService {
     private final TagRepository tagRepository;
     private final PostTagRepository postTagRepository;
     private final FileService fileService;
+    private final Post22Repository post22Repositry;
 
     @Transactional
+    public Post2ResponseDto createPost2(Post2CreateWithAuthorRequestDto requestDto, User user) {
+        return Post2ResponseDto.from(post22Repositry.save(requestDto.toEntity(user)));
+    }
+
     public PostResponseDto createPost(PostCreateRequestDto requestDto) {
         Post post = postRepository.save(requestDto.toEntity());
         return PostResponseDto.from(post);

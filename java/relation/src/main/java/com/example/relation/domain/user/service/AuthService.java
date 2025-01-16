@@ -52,6 +52,7 @@ public class AuthService {
         // 3. 객체로 만든 것을 manager에게 통과시켜 인증 정보가 들어있는 "authentication"객체를 만듭니다.
         // 4. "authenticationmanager"를 활용하기 위해 DI를 해줍니다 => security config로 이동
 
+        // authentication 이게 응 맞아 이부분임
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         // 2. DTO로 부터 온 정보를 객체로 만듭니다.
