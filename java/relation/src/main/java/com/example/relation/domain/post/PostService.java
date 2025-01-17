@@ -39,6 +39,7 @@ public class PostService {
         return Post2ResponseDto.from(post22Repositry.save(requestDto.toEntity(user)));
     }
 
+    @Transactional
     public PostResponseDto createPost(PostCreateRequestDto requestDto) {
         Post post = postRepository.save(requestDto.toEntity());
         return PostResponseDto.from(post);

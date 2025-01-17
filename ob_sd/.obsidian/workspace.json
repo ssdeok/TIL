@@ -223,12 +223,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "250116 특강.md",
+                "file": "250117 스프링.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250116 특강"
+              "title": "250117 스프링"
             }
           }
         ],
@@ -378,7 +378,7 @@
   "active": "f28811cf1668d7e5",
   "lastOpenFiles": [
     "250116 스프링.md",
-    "250116 특강.md",
+    "250117 스프링.md",
     "250115 스프링.md",
     "250114 스프링.md",
     "250113 스프링.md",
