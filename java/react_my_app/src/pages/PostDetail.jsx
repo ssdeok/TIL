@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import postApi from "../api/postsApi";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import postApi from '../api/postsApi';
+import CommentForm from '../components/CommentForm';
 
 export default function PostDetail() {
   const [post, setPost] = useState({});
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   const { postId } = useParams();
 
@@ -34,6 +35,8 @@ export default function PostDetail() {
       <h3>{post?.title}</h3>
       <p>{post?.content}</p>
       <hr />
+      {/* <CommentForm></CommentForm> */}
+      <CommentForm setPost={setPost} postId={postId}></CommentForm>
       <div>
         tags :
         {post?.tags?.map((tag) => {
@@ -41,6 +44,7 @@ export default function PostDetail() {
         })}
       </div>
       <hr />
+
       {post?.comments?.length ? (
         <ol>
           {post?.comments?.map((comment) => {
@@ -53,7 +57,6 @@ export default function PostDetail() {
     </div>
   );
 }
-
 
 // import React, { useEffect, useState } from 'react';
 // import { useNavigate, useParams } from 'react-router-dom';

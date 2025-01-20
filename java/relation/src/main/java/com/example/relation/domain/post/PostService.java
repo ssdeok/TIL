@@ -15,6 +15,7 @@ import com.example.relation.domain.user.entity.User;
 import com.example.relation.global.common.service.FileService;
 import com.example.relation.global.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -46,13 +48,14 @@ public class PostService {
     }
 
     public List<PostListResponseDto> readPosts(){
+        log.info("read posts");
         return postRepository.findAll().stream()
                 .map(PostListResponseDto::from)
                 .toList();
     }
 
     public PostWithCommentResponseDto readPostById(Long id){
-
+        log.info("read posts : {}", id);
         Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException());
 //        comments 특정 post id를 가지고 있는 comments를 읽고 싶다
         List<Comment> comments = commentRepository.findByPostId(id);

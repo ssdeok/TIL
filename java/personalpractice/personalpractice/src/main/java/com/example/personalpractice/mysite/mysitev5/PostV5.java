@@ -1,14 +1,16 @@
 package com.example.personalpractice.mysite.mysitev5;
 
+import com.example.personalpractice.mysite.mysitev5.comment.Comment;
 import com.example.personalpractice.mysite.mysitev5.dto.PostUpdateRequestDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.w3c.dom.stylesheets.LinkStyle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +30,9 @@ public class PostV5 {
         this.content = content;
         this.author = author;
     }
+
+    @OneToMany
+    private List<Comment> comments = new ArrayList<>();
 
     public PostV5 update(PostUpdateRequestDto requestDto) {
         this.title = requestDto.getTitle();

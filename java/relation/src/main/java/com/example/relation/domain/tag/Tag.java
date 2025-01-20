@@ -6,9 +6,7 @@ import lombok.*;
 
 @Entity
 @Getter
-@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,5 +15,9 @@ public class Tag {
     @Column(nullable = false, unique = true)
     private String name;
 
+    @Builder
+    public Tag(String name) {
+        this.name = name;
+    }
 
 }

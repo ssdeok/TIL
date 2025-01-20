@@ -50,6 +50,7 @@ public class SecurityConfig{
                         .requestMatchers("/auth/verify").authenticated()
                         // auth는 다 돼
                         .requestMatchers("/auth/**", "/error", "/images/**").permitAll()
+                        .requestMatchers("/swagger-ui/**", "swagger-ui.html", "/api-docs/**").permitAll()
                         // 토큰이 없어도 데이터를 받아올 수 있게 하는 코드
                         .requestMatchers(HttpMethod.GET, SecurityPatchConfig.PUBLIC_GET_URLS).permitAll()
                         // 나머지는 안돼
