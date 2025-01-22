@@ -15,7 +15,7 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PostV5 {
+public class PostV5 extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
@@ -31,7 +31,7 @@ public class PostV5 {
         this.author = author;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "postV5")
     private List<Comment> comments = new ArrayList<>();
 
     public PostV5 update(PostUpdateRequestDto requestDto) {

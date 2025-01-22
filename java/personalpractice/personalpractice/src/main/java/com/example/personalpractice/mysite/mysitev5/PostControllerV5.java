@@ -1,9 +1,6 @@
 package com.example.personalpractice.mysite.mysitev5;
 
-import com.example.personalpractice.mysite.mysitev5.dto.PostCreateRequestDto;
-import com.example.personalpractice.mysite.mysitev5.dto.PostListResponseDto;
-import com.example.personalpractice.mysite.mysitev5.dto.PostResponseDto;
-import com.example.personalpractice.mysite.mysitev5.dto.PostUpdateRequestDto;
+import com.example.personalpractice.mysite.mysitev5.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,9 +39,15 @@ public class PostControllerV5 {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse<PostResponseDto>> readPostById(@PathVariable Long id) {
+    public ResponseEntity<ApiResponse<PostWithCommentResponseDto>> readPostById(@PathVariable Long id) {
 
         return ResponseEntity.ok(ApiResponse.ok(postServiceV5.readPostById(id)));
+    }
+
+    @GetMapping("/v2/{id}")
+    public ResponseEntity<ApiResponse<PostWithCommentResponseDtoV2>> readPostByIdV2(@PathVariable Long id) {
+
+        return ResponseEntity.ok(ApiResponse.ok(postServiceV5.readPostByIdV2(id)));
     }
 
     @PutMapping("/{id}")

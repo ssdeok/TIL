@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface Post2Repository extends JpaRepository<Post2, Long> {
 
     Page<Post2> findAllByAuthorId(Long authorId, Pageable pageable);
+
 }
