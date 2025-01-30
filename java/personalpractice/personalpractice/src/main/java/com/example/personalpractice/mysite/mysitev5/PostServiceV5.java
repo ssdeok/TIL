@@ -1,5 +1,6 @@
 package com.example.personalpractice.mysite.mysitev5;
 
+import com.example.personalpractice.global.ResourceNotFoundException;
 import com.example.personalpractice.mysite.mysitev5.comment.Comment;
 import com.example.personalpractice.mysite.mysitev5.comment.CommentRepository;
 import com.example.personalpractice.mysite.mysitev5.dto.*;
@@ -15,6 +16,7 @@ import java.util.List;
 public class PostServiceV5 {
     private final PostRepositoryV5 postRepositoryV5;
     private final CommentRepository commentRepository;
+
 
     @Transactional
     public PostResponseDto createPost(PostCreateRequestDto requestDto) {
@@ -35,7 +37,8 @@ public class PostServiceV5 {
     }
 
     public PostWithCommentResponseDtoV2 readPostByIdV2(Long id) {
-        PostV5 postV5 = postRepositoryV5.findByIdWithComment(id).orElseThrow(() -> new IllegalArgumentException());
+        PostV5 postV5 = postRepositoryV5.findByIdWithComment(id)
+                .orElseThrow(() -> new ResourceNotFoundException());
         return PostWithCommentResponseDtoV2.from(postV5);
     }
 

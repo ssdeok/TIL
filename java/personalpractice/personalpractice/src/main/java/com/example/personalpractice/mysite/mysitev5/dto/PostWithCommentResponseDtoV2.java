@@ -20,6 +20,20 @@ public class PostWithCommentResponseDtoV2 {
     private final LocalDateTime updatedAt;
     private final List<CommentResponseDto> comments;
 
+//    public static PostWithCommentResponseDtoV2 from(PostV5 entity) {
+//        return PostWithCommentResponseDtoV2.builder()
+//                .id(entity.getId())
+//                .title(entity.getTitle())
+//                .content(entity.getContent())
+//                .author(entity.getAuthor())
+//                .comments(
+//                        comments.stream().map(CommentResponseDto::from).toList()
+//                )
+//                .createdAt(entity.getCreatedAt())
+//                .updatedAt(entity.getUpdatedAt())
+//                .build();
+//    }
+
     public static PostWithCommentResponseDtoV2 from(PostV5 entity) {
         return PostWithCommentResponseDtoV2.builder()
                 .id(entity.getId())
@@ -27,7 +41,7 @@ public class PostWithCommentResponseDtoV2 {
                 .content(entity.getContent())
                 .author(entity.getAuthor())
                 .comments(
-                        comments.stream().map(CommentResponseDto::from).toList()
+                        entity.getComments().stream().map(CommentResponseDto::from).toList()
                 )
                 .createdAt(entity.getCreatedAt())
                 .updatedAt(entity.getUpdatedAt())
