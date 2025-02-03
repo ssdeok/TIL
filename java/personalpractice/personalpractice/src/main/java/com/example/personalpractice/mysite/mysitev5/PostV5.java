@@ -31,7 +31,7 @@ public class PostV5 extends BaseTimeEntity {
         this.author = author;
     }
 
-    @OneToMany(mappedBy = "postV5")
+    @OneToMany(mappedBy = "postV5", fetch = FetchType.LAZY)
     private List<Comment> comments = new ArrayList<>();
 
     public PostV5 update(PostUpdateRequestDto requestDto) {

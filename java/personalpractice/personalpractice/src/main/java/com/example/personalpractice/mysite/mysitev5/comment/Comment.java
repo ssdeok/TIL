@@ -2,6 +2,7 @@ package com.example.personalpractice.mysite.mysitev5.comment;
 
 import com.example.personalpractice.mysite.mysitev5.BaseTimeEntity;
 import com.example.personalpractice.mysite.mysitev5.PostV5;
+import com.example.personalpractice.mysite.mysitev5.dto.CommentRequestDto;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -34,5 +35,10 @@ public class Comment extends BaseTimeEntity {
     public void setPostV5(PostV5 postV5) {
         this.postV5 = postV5;
         postV5.getComments().add(this);
+    }
+
+    public Comment update(CommentRequestDto requestDto) {
+        this.content = requestDto.getContent();
+        return this;
     }
 }
