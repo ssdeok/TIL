@@ -116,9 +116,21 @@
               "icon": "excalidraw-icon",
               "title": "20250206"
             }
+          },
+          {
+            "id": "c45464ffbe264daf",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "20250206.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "20250206"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -262,10 +274,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5e1748b576e9745e",
+  "active": "c45464ffbe264daf",
   "lastOpenFiles": [
     "20250205.md",
+    "마크다운 옵시디언.md",
+    "다운로드.jpg",
     "20250206.md",
+    "250207 도커.md",
     "20250204.md",
     "20250203.md",
     "20250124.md",
@@ -274,7 +289,6 @@
     "20250121.md",
     "250206 도커.md",
     "form.md",
-    "마크다운 옵시디언.md",
     "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
     "250204 도커.md",
     "250124 도커.md",
@@ -288,11 +302,8 @@
     "250114 스프링.md",
     "250113 스프링.md",
     "250110 스프링.md",
-    "250109 스프링.md",
-    "250108 스프링.md",
     "Excalidraw",
     "무제 파일.canvas",
-    "무제 파일 1.canvas",
-    "다운로드.jpg"
+    "무제 파일 1.canvas"
   ]
 }
