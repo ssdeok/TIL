@@ -25,18 +25,30 @@
             "id": "36ab1a888d1d6b01",
             "type": "leaf",
             "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "20250211.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "20250211"
+            }
+          },
+          {
+            "id": "64b0879f8cd8c8d6",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "250211 데이터베이스 연습.md",
+                "file": "250212 도커.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250211 데이터베이스 연습"
+              "title": "250212 도커"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -180,8 +192,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "36ab1a888d1d6b01",
+  "active": "64b0879f8cd8c8d6",
   "lastOpenFiles": [
+    "20250211.md",
+    "250212 도커.md",
+    "무제",
     "250211 도커.md",
     "250211 데이터베이스 연습.md",
     "250210 도커.md",
@@ -207,8 +222,6 @@
     "250122 도커.md",
     "250121 도커 (정우영 강사님 시작).md",
     "250120 스프링.md",
-    "250117 스프링.md",
-    "250116 스프링.md",
     "Excalidraw",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
