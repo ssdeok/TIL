@@ -8,73 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d0c058343cb3dd6f",
+            "id": "bd8df40228e9d987",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "250211 도커.md",
+                "file": "250217 특강.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250211 도커"
+              "title": "250217 특강"
             }
           },
           {
-            "id": "36ab1a888d1d6b01",
+            "id": "5de72944eda2e00c",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "20250211.md"
+                "file": "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "20250211"
-            }
-          },
-          {
-            "id": "64b0879f8cd8c8d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250212 도커.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250212 도커"
-            }
-          },
-          {
-            "id": "a8efdbe250a94215",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "20250207.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "20250207"
-            }
-          },
-          {
-            "id": "25f2367511d8dc4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250214 도커.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250214 도커"
+              "title": "Drawing 2025-02-17 13.18.47.excalidraw"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -218,10 +178,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "25f2367511d8dc4e",
+  "active": "5de72944eda2e00c",
   "lastOpenFiles": [
-    "20250207.md",
+    "스크린샷 2025-02-17 191052.png",
+    "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
+    "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
+    "250217 특강.md",
+    "1119.md",
+    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
+    "daangn-business-model-canvas3.png",
+    "250211 데이터베이스 연습.md",
     "250214 도커.md",
+    "20250207.md",
     "20250205.md",
     "20250204.md",
     "20250206.md",
@@ -233,7 +201,6 @@
     "20250211.md",
     "무제",
     "250211 도커.md",
-    "250211 데이터베이스 연습.md",
     "250210 도커.md",
     "20250210.md",
     "250207 도커.md",
@@ -242,12 +209,6 @@
     "20250124.md",
     "20250123.md",
     "20250122.md",
-    "20250121.md",
-    "form.md",
-    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
-    "250124 도커.md",
-    "250123 도커.md",
-    "250122 도커.md",
     "Excalidraw",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
