@@ -1,28 +1,14 @@
 {
   "main": {
-    "id": "9bd962ce9efaacab",
+    "id": "bdc3a9b3eecdbb86",
     "type": "split",
     "children": [
       {
-        "id": "2437cb058c4c421d",
+        "id": "e8a06353513bd616",
         "type": "tabs",
         "children": [
           {
-            "id": "bd8df40228e9d987",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250217 특강.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250217 특강"
-            }
-          },
-          {
-            "id": "5de72944eda2e00c",
+            "id": "4782be5f2971c3ed",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -32,41 +18,22 @@
               "icon": "excalidraw-icon",
               "title": "Drawing 2025-02-17 13.18.47.excalidraw"
             }
-          },
-          {
-            "id": "974b75431d2d3151",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "프로젝트 과정 흐름.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "프로젝트 과정 흐름"
-            }
           }
-        ],
-<<<<<<< HEAD
-        "currentTab": 1
-=======
-        "currentTab": 5
->>>>>>> ed577094a3381e25bac057caa91bce583b7366b3
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "27603e6685779cc3",
+    "id": "f0708260ba5768c6",
     "type": "split",
     "children": [
       {
-        "id": "7cee8f5b3ae2949b",
+        "id": "b2aa62c4ddd3f7e8",
         "type": "tabs",
         "children": [
           {
-            "id": "c5b1673748aa850f",
+            "id": "a802d898e3eb866f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -79,7 +46,7 @@
             }
           },
           {
-            "id": "313d3b95cdcf3969",
+            "id": "f059c87a4721d24c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -96,13 +63,13 @@
             }
           },
           {
-            "id": "39f2c373302611c7",
+            "id": "fbd8575d89004092",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "북마크"
             }
           }
         ]
@@ -112,20 +79,20 @@
     "width": 300
   },
   "right": {
-    "id": "11089b1172aee316",
+    "id": "71ab6efc397dc187",
     "type": "split",
     "children": [
       {
-        "id": "bf7e5b038928be64",
+        "id": "625b18056930d465",
         "type": "tabs",
         "children": [
           {
-            "id": "f8f1a7766f543bc1",
+            "id": "ea59b685bcd84a78",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241024.md",
+                "file": "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,50 +102,54 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "241024의 백링크"
+              "title": "Drawing 2025-02-17 13.18.47.excalidraw 의 백링크"
             }
           },
           {
-            "id": "b8bcd1d46a8c3314",
+            "id": "9c25a24810a5998d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241024.md",
+                "file": "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "241024의 나가는 링크"
+              "title": "Drawing 2025-02-17 13.18.47.excalidraw 의 나가는 링크"
             }
           },
           {
-            "id": "ae10bedf748b9654",
+            "id": "0b01a1ef917ae055",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "태그"
             }
           },
           {
-            "id": "52cdfe2ba8390823",
+            "id": "f5c86e8fd2e880da",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "241024.md"
+                "file": "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "241024 개요"
+              "title": "Drawing 2025-02-17 13.18.47.excalidraw 의 개요"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,62 +159,16 @@
   "left-ribbon": {
     "hiddenItems": {
       "switcher:빠른 전환기 열기": false,
-      "daily-notes:오늘의 일일 노트 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-<<<<<<< HEAD
-  "active": "5de72944eda2e00c",
+  "active": "4782be5f2971c3ed",
   "lastOpenFiles": [
-    "스크린샷 2025-02-17 191052.png",
-    "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
-    "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
-    "250217 특강.md",
-    "1119.md",
-    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
-    "daangn-business-model-canvas3.png",
-    "250211 데이터베이스 연습.md",
-    "250214 도커.md",
-=======
-  "active": "974b75431d2d3151",
-  "lastOpenFiles": [
-    "250214 도커.md",
-    "프로젝트 과정 흐름.md",
->>>>>>> ed577094a3381e25bac057caa91bce583b7366b3
-    "20250207.md",
-    "20250205.md",
-    "20250204.md",
-    "20250206.md",
-    "20250203.md",
-    "250206 도커.md",
-    "250204 도커.md",
-    "250213 도커.md",
-    "250212 도커.md",
-    "20250211.md",
-    "무제",
-    "250211 도커.md",
-    "250210 도커.md",
-    "20250210.md",
-    "250207 도커.md",
-    "마크다운 옵시디언.md",
-    "다운로드.jpg",
-    "20250124.md",
-    "20250123.md",
-    "20250122.md",
-<<<<<<< HEAD
-=======
-    "20250121.md",
-    "form.md",
-    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
-    "250124 도커.md",
-    "250123 도커.md",
->>>>>>> ed577094a3381e25bac057caa91bce583b7366b3
-    "Excalidraw",
-    "무제 파일.canvas",
-    "무제 파일 1.canvas"
+    "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md"
   ]
 }
