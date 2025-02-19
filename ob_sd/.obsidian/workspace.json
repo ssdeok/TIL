@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "프로젝트 주제 컨셉"
             }
+          },
+          {
+            "id": "70d07379b9ae1845",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "프로젝트 주제 컨셉.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "프로젝트 주제 컨셉"
+            }
+          },
+          {
+            "id": "8986ebd82045464a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "250219 프로젝트 회의.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "250219 프로젝트 회의"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -165,12 +194,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4f8798f3ac674042",
+  "active": "8986ebd82045464a",
   "lastOpenFiles": [
-    "250218 프로젝트 준비.md",
     "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
-    "프로젝트 과정 흐름.md",
     "프로젝트 주제 컨셉.md",
+    "250219 프로젝트 회의.md",
+    "250218 프로젝트 준비.md",
+    "프로젝트 과정 흐름.md",
     "스크린샷 2025-02-17 191052.png",
     "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
     "250217 특강.md",
@@ -196,7 +226,6 @@
     "250207 도커.md",
     "마크다운 옵시디언.md",
     "다운로드.jpg",
-    "20250124.md",
     "Excalidraw",
     "무제 파일.canvas",
     "무제 파일 1.canvas"
