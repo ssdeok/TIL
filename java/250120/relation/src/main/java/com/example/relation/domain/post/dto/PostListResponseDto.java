@@ -22,5 +22,5 @@ public class PostListResponseDto {
                 .updatedAt(entity.getUpdatedAt())
                 .build();
     }
-
 }
+
