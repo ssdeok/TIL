@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "250220  프로젝트 스크럼"
             }
+          },
+          {
+            "id": "101b01c9c9cdd743",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "250221 스크럼.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "250221 스크럼"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -208,10 +222,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9b3f0d3f6ef085ae",
+  "active": "101b01c9c9cdd743",
   "lastOpenFiles": [
-    "250219 프로젝트 회의.md",
+    "무제 1.md",
+    "250221 스크럼.md",
     "250220  프로젝트 스크럼.md",
+    "250219 프로젝트 회의.md",
     "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
     "프로젝트 주제 컨셉.md",
     "250218 프로젝트 준비.md",
@@ -237,8 +253,6 @@
     "무제",
     "250211 도커.md",
     "250210 도커.md",
-    "20250210.md",
-    "250207 도커.md",
     "다운로드.jpg",
     "Excalidraw",
     "무제 파일.canvas",
