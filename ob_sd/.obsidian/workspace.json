@@ -8,49 +8,75 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4f8798f3ac674042",
+            "id": "d2c700a8545b2314",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프로젝트 주제 컨셉.md",
+                "file": "250310 2차프로젝트 시작.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "프로젝트 주제 컨셉"
+              "title": "250310 2차프로젝트 시작"
             }
           },
           {
-            "id": "70d07379b9ae1845",
+            "id": "1a1c06824ede2771",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
+          },
+          {
+            "id": "4875e52422b28f5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프로젝트 주제 컨셉.md",
+                "file": "250311 2차프로젝트 스크럼.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "프로젝트 주제 컨셉"
+              "title": "250311 2차프로젝트 스크럼"
             }
           },
           {
-            "id": "8986ebd82045464a",
+            "id": "8046410d1af14c34",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "250219 프로젝트 회의.md",
+                "file": "250311 2차프로젝트 스크럼.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250219 프로젝트 회의"
+              "title": "250311 2차프로젝트 스크럼"
             }
           },
           {
-            "id": "9b3f0d3f6ef085ae",
+            "id": "20a3a385dab24da4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "250311 배포 보충수업.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "250311 배포 보충수업"
+            }
+          },
+          {
+            "id": "cddd5e963dd9f30e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,23 +88,9 @@
               "icon": "lucide-file",
               "title": "250220  프로젝트 스크럼"
             }
-          },
-          {
-            "id": "101b01c9c9cdd743",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250221 스크럼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250221 스크럼"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -222,37 +234,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "101b01c9c9cdd743",
+  "active": "cddd5e963dd9f30e",
   "lastOpenFiles": [
-    "무제 1.md",
-    "250221 스크럼.md",
-    "250220  프로젝트 스크럼.md",
     "250219 프로젝트 회의.md",
-    "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
-    "프로젝트 주제 컨셉.md",
     "250218 프로젝트 준비.md",
-    "프로젝트 과정 흐름.md",
-    "스크린샷 2025-02-17 191052.png",
+    "250121 도커 (정우영 강사님 시작).md",
+    "250312 2차프로젝트 스크럼.md",
+    "250311 배포 보충수업.md",
+    "250311 2차프로젝트 스크럼.md",
+    "Excalidraw/Drawing 2025-03-11 13.17.32.excalidraw.md",
     "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
-    "250217 특강.md",
-    "1119.md",
-    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
-    "daangn-business-model-canvas3.png",
-    "250211 데이터베이스 연습.md",
-    "250214 도커.md",
-    "20250207.md",
-    "20250205.md",
-    "20250204.md",
-    "20250206.md",
+    "250228 스크럼.md",
+    "250310 2차프로젝트 시작.md",
+    "250227 스크럼.md",
+    "무제 1",
+    "250226 스크럼.md",
+    "250225 스크럼.md",
+    "250224  스크럼.md",
+    "20250121.md",
+    "20250122.md",
+    "20250123.md",
+    "20250124.md",
     "20250203.md",
-    "250206 도커.md",
-    "250204 도커.md",
-    "250213 도커.md",
-    "250212 도커.md",
+    "20250204.md",
+    "20250205.md",
+    "20250206.md",
+    "20250207.md",
+    "20250210.md",
     "20250211.md",
+    "250222 스크럼.md",
+    "스크린샷 2025-02-17 191052.png",
+    "daangn-business-model-canvas3.png",
     "무제",
-    "250211 도커.md",
-    "250210 도커.md",
     "다운로드.jpg",
     "Excalidraw",
     "무제 파일.canvas",
