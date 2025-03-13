@@ -8,89 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d2c700a8545b2314",
+            "id": "92b744021a132b30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "250310 2차프로젝트 시작.md",
+                "file": "250313 2차프로젝트 스크럼.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250310 2차프로젝트 시작"
-            }
-          },
-          {
-            "id": "1a1c06824ede2771",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.9"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
-            }
-          },
-          {
-            "id": "4875e52422b28f5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250311 2차프로젝트 스크럼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250311 2차프로젝트 스크럼"
-            }
-          },
-          {
-            "id": "8046410d1af14c34",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250311 2차프로젝트 스크럼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250311 2차프로젝트 스크럼"
-            }
-          },
-          {
-            "id": "20a3a385dab24da4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250311 배포 보충수업.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250311 배포 보충수업"
-            }
-          },
-          {
-            "id": "cddd5e963dd9f30e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "250220  프로젝트 스크럼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "250220  프로젝트 스크럼"
+              "title": "250313 2차프로젝트 스크럼"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,18 +165,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cddd5e963dd9f30e",
+  "active": "92b744021a132b30",
   "lastOpenFiles": [
+    "250220  프로젝트 스크럼.md",
+    "250311 배포 보충수업.md",
+    "250311 2차프로젝트 스크럼.md",
+    "250310 2차프로젝트 시작.md",
+    "250313 2차프로젝트 스크럼.md",
     "250219 프로젝트 회의.md",
     "250218 프로젝트 준비.md",
     "250121 도커 (정우영 강사님 시작).md",
     "250312 2차프로젝트 스크럼.md",
-    "250311 배포 보충수업.md",
-    "250311 2차프로젝트 스크럼.md",
     "Excalidraw/Drawing 2025-03-11 13.17.32.excalidraw.md",
     "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
     "250228 스크럼.md",
-    "250310 2차프로젝트 시작.md",
     "250227 스크럼.md",
     "무제 1",
     "250226 스크럼.md",
@@ -261,8 +194,6 @@
     "20250206.md",
     "20250207.md",
     "20250210.md",
-    "20250211.md",
-    "250222 스크럼.md",
     "스크린샷 2025-02-17 191052.png",
     "daangn-business-model-canvas3.png",
     "무제",
