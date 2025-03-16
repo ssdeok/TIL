@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2437cb058c4c421d",
+        "id": "fe7d5b85a70a7a9a",
         "type": "tabs",
         "children": [
           {
-            "id": "92b744021a132b30",
+            "id": "a98dc5979120d5de",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "250313 2차프로젝트 스크럼.md",
+                "file": "2차 프로젝트 기획 회고.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "250313 2차프로젝트 스크럼"
+              "title": "2차 프로젝트 기획 회고"
             }
           }
         ]
@@ -165,37 +165,36 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "92b744021a132b30",
+  "active": "a98dc5979120d5de",
   "lastOpenFiles": [
+    "2차 프로젝트 기획 회고.md",
     "250220  프로젝트 스크럼.md",
-    "250311 배포 보충수업.md",
-    "250311 2차프로젝트 스크럼.md",
-    "250310 2차프로젝트 시작.md",
-    "250313 2차프로젝트 스크럼.md",
-    "250219 프로젝트 회의.md",
+    "프로젝트 마무리하기.md",
+    "250221 스크럼.md",
     "250218 프로젝트 준비.md",
-    "250121 도커 (정우영 강사님 시작).md",
-    "250312 2차프로젝트 스크럼.md",
-    "Excalidraw/Drawing 2025-03-11 13.17.32.excalidraw.md",
-    "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
-    "250228 스크럼.md",
-    "250227 스크럼.md",
-    "무제 1",
-    "250226 스크럼.md",
-    "250225 스크럼.md",
-    "250224  스크럼.md",
-    "20250121.md",
-    "20250122.md",
-    "20250123.md",
-    "20250124.md",
-    "20250203.md",
-    "20250204.md",
-    "20250205.md",
-    "20250206.md",
-    "20250207.md",
-    "20250210.md",
+    "250219 프로젝트 회의.md",
+    "무제 1.md",
+    "Excalidraw/Drawing 2025-02-17 13.18.47.excalidraw.md",
+    "프로젝트 주제 컨셉.md",
+    "프로젝트 과정 흐름.md",
     "스크린샷 2025-02-17 191052.png",
+    "Excalidraw/Drawing 2025-02-17 15.04.07.excalidraw.md",
+    "250217 특강.md",
+    "1119.md",
+    "Excalidraw/Drawing 2025-02-05 17.59.22.excalidraw.md",
     "daangn-business-model-canvas3.png",
+    "250211 데이터베이스 연습.md",
+    "250214 도커.md",
+    "20250207.md",
+    "20250205.md",
+    "20250204.md",
+    "20250206.md",
+    "20250203.md",
+    "250206 도커.md",
+    "250204 도커.md",
+    "250213 도커.md",
+    "250212 도커.md",
+    "20250211.md",
     "무제",
     "다운로드.jpg",
     "Excalidraw",
