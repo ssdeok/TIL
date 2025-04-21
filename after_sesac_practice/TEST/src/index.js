@@ -20,6 +20,8 @@
 
 // start('hyobin', finish);
 
+///////////////////////////////////////// 함수
+
 // let obj = {};
 
 // console.log(obj);
@@ -34,11 +36,11 @@
 //   },
 // };
 
-let car = {
-  name: '붕붕',
-  model: 'morning',
-  color: 'black',
-};
+// let car = {
+//   name: '붕붕',
+//   model: 'morning',
+//   color: 'black',
+// };
 
 // console.log(car.name);
 // console.log(car.color);
@@ -74,3 +76,49 @@ let car = {
 
 // person.print();
 // person['print']();
+
+//////////////////////////////////// 객체
+
+// let arr1 = new Array(1, 2, 3);
+// let arr2 = new Array(3);
+
+// console.log(arr1);
+// console.log(arr2);
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [3];
+
+// console.log(arr1);
+// console.log(arr2);
+
+// let arr = [
+//   { name: '홍길동' },
+//   1,
+//   'array',
+//   function () {
+//     console.log('hello world!');
+//   },
+//   null,
+//   undefined,
+// ];
+
+// console.log(arr);
+
+// let array = [1, 'hello', null];
+
+// console.log(array[0]);
+// console.log(array[1]);
+// console.log(array[2]);
+
+// let fruits = ['apple', 'orange', 'peach'];
+// fruits.push('grape');
+
+// console.log(fruits);
+
+// let fruits = ['apple', 'orange', 'peach'];
+// fruits.unshift('grape');
+
+// console.log(fruits);
+
+///////////////////////////// 배열
+
