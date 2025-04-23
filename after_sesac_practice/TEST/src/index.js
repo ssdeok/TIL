@@ -307,3 +307,57 @@
 // console.log(a, b, c, d);
 
 ///////////////////////////// 배열 메서드-2
+
+// let colors = ['green', 'blue', 'purple'];
+
+// let c1 = colors[0];
+// let c2 = colors[1];
+// let c3 = colors[2];
+
+// let [c1, c2, c3] = colors;
+
+// let c1, c2, c3, c4; // 선언 분리 할당
+// [c1, c2, c3, c4 = 'yellow'] = ['green', 'blue', 'purple'];
+
+// console.log(c1);
+// console.log(c2);
+// console.log(c3);
+// console.log(c4);
+
+// let a = 10;
+// let b = 5;
+// let tmp;
+
+// tmp = a;
+// a = b;
+// b = tmp;
+
+// console.log(a, b);
+
+// let a = 10;
+// let b = 5;
+
+// [a, b] = [b, a];
+
+// console.log(a, b);
+
+// let colors = {
+//   c1: 'green',
+//   c2: 'blue',
+//   c3: 'purple',
+// };
+
+// let { c1, c2, c3 } = colors;
+
+// let color1 = colors.c1;
+// let color2 = colors.c2;
+// let color3 = colors.c3;
+
+// let { c1, c2, c3, c4 = 'yellow' } = colors;
+
+// console.log(c1);
+// console.log(c2);
+// console.log(c3);
+// console.log(c4);
+
+///////////////////////////// 구조 분해 할당
