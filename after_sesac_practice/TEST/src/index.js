@@ -140,3 +140,116 @@
 // person2.sayHi();
 
 ///////////////////////////////// 생성자 함수
+
+// for (let i = 5; i > 0; i--) {
+//   console.log(i);
+// }
+
+// let i = 1;
+// while (i < 6) {
+//   console.log(i);
+//   i++;
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// let person = {
+//   name: '홍길동',
+//   age: 25,
+//   height: 180,
+// };
+
+// let newArray = Object.keys(person);
+
+// for (let i = 0; i < newArray.length; i++) {
+//   let nowKey = newArray[i];
+//   console.log(`key: ${nowKey}, value: ${person[nowKey]}`);
+// }
+
+// let newArray = Object.values(person);
+
+// for (let i = 0; i < newArray.length; i++) {
+//   console.log(`value: ${newArray[i]}`);
+// }
+
+// let newArray = Object.entries(person);
+
+// for (let i = 0; i < newArray.length; i++) {
+//   console.log(`key: ${newArray[i][0]}, value: ${newArray[i][1]}`);
+// }
+// console.log(Object.entries(person));
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i of arr) {
+//   console.log(i);
+// }
+
+// let person = {
+//   name: '홍길동',
+//   age: 35,
+//   height: 180,
+// };
+
+// for (let key in person) {
+//   console.log(`key ${key}, value : ${person[key]}`);
+// }
+
+////////////////////////////// 반복문
+
+// let arr = [1, 2, 3, 4, 5];
+
+// arr.forEach((elm, idx, array) => {
+//   console.log(`${idx}번째 요소는 ${elm}입니다.`);
+//   console.log(array);
+// });
+
+// let newArray = arr.map((elm) => {
+//   return elm * 10;
+// });
+
+// for (let i = 0; i < arr.length; i++) {
+//   newArray.push(arr[i] * 10);
+// }
+
+// console.log(newArray);
+
+// let colors = ['green', 'blue', 'purple'];
+// console.log(colors.at(-1));
+
+// console.log(colors.includes('blue', 2));
+// console.log(colors.includes('blue', 1));
+
+let colors = [
+  { id: 1, color: 'green' },
+  { id: 2, color: 'blue' },
+  { id: 3, color: 'purple' },
+  { id: 4, color: 'yellow' },
+];
+// console.log(colors.indexOf('blue', 1));
+
+// let idx = colors.findIndex((elm) => elm.color === 'purple');
+
+// console.log(idx);
+
+// colors.findIndex((elm, idx, array) =>
+//   console.log(`${idx} 번째 값은 id: ${elm.id}, color: ${elm.color}`)
+// );
+// colors.findIndex((elm, idx, array) => console.log(array));
+
+// let idx = colors.find((elm) => elm.color === 'purple');
+
+// console.log(idx);
+
+// let filterArray = colors.filter((elm, idx, array) => elm.id > 1);
+
+// console.log(filterArray);
+
+let sliceArray = colors.slice(1, 3);
+
+console.log(sliceArray);
+///////////////////////////// 배열 메서드-1
