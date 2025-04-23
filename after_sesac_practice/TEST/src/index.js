@@ -224,12 +224,12 @@
 // console.log(colors.includes('blue', 2));
 // console.log(colors.includes('blue', 1));
 
-let colors = [
-  { id: 1, color: 'green' },
-  { id: 2, color: 'blue' },
-  { id: 3, color: 'purple' },
-  { id: 4, color: 'yellow' },
-];
+// let colors = [
+//   { id: 1, color: 'green' },
+//   { id: 2, color: 'blue' },
+//   { id: 3, color: 'purple' },
+//   { id: 4, color: 'yellow' },
+// ];
 // console.log(colors.indexOf('blue', 1));
 
 // let idx = colors.findIndex((elm) => elm.color === 'purple');
@@ -249,7 +249,61 @@ let colors = [
 
 // console.log(filterArray);
 
-let sliceArray = colors.slice(1, 3);
+// let sliceArray = colors.slice(1, 3);
 
-console.log(sliceArray);
+// console.log(sliceArray);
+
 ///////////////////////////// 배열 메서드-1
+
+// let array1 = ['green', 'blue'];
+// let array2 = ['purple', 'yellow'];
+
+// console.log(array1.concat(array2))
+
+// let array1 = ['green', 'blue', 'purple', 'yellow'];
+// console.log(array1.join());
+// console.log(array1.join(' '));
+
+// const compare = (a, b) => {
+//   if (a > b) return -1;
+//   else if (a < b) return 1;
+//   else return 0;
+// };
+
+// let colors = ['green', 'blue', 'purple'];
+// colors.sort(compare);
+
+// console.log(colors);
+
+// const compare = (a, b) => {
+//   return b - a;
+// };
+// let numbers = [1, 100, 25, 50, 120, 3];
+// numbers.sort(compare);
+// console.log(numbers);
+
+// let numbers = [1, 100, 25, 50];
+// let sum = 0;
+
+// numbers.forEach((elm) => {
+//   sum += elm;
+// });
+
+// console.log(sum);
+
+// let numbers = [1, 100, 25, 50];
+// let sum = numbers.reduce((acc, cur, idx) => {
+//   console.log(acc, cur, idx);
+//   return acc + cur;
+// }, 0);
+
+// console.log(sum);
+
+// let a = Array.isArray([1, 100, 50]);
+// let b = Array.isArray({ id: 1, color: 'green' });
+// let c = Array.isArray('string');
+// let d = Array.isArray(undefined);
+
+// console.log(a, b, c, d);
+
+///////////////////////////// 배열 메서드-2
