@@ -37,5 +37,6 @@ for _ in range(m):
     v1, v2 = map(int, input().split())
     graph[v1][v2] = 1
 
+
 for line in graph:
     print(line)
