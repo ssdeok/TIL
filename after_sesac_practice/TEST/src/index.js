@@ -448,28 +448,121 @@
 //   console.log('종료');
 // });
 
-const workA = () => {
-  setTimeout(() => {
-    console.log('workA');
-  }, 5000);
-};
-const workB = () => {
-  setTimeout(() => {
-    console.log('workB');
-  }, 3000);
-};
-const workC = () => {
-  setTimeout(() => {
-    console.log('workC');
-  }, 10000);
-};
-const workD = () => {
-  console.log('workD');
-};
+// const workA = () => {
+//   setTimeout(() => {
+//     console.log('workA');
+//   }, 5000);
+// };
+// const workB = () => {
+//   setTimeout(() => {
+//     console.log('workB');
+//   }, 3000);
+// };
+// const workC = () => {
+//   setTimeout(() => {
+//     console.log('workC');
+//   }, 10000);
+// };
+// const workD = () => {
+//   console.log('workD');
+// };
 
-workA();
-workB();
-workC();
-workD();
+// workA();
+// workB();
+// workC();
+// workD();
 
 ///////////////////////////// 비동기
+
+// const executor = (resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('성공');
+//     reject('실패');
+//   }, 3000);
+// };
+
+// const promise = new Promise(executor);
+// promise
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// const workA = (value) => {
+//   const promise = new Promise((resolve) => {
+//     setTimeout(() => {
+//       callback(value + 5);
+//     }, 5000);
+//   });
+//   return promise;
+// };
+// const workB = (value, callback) => {
+//   const promise = new Promise((resolve) => {
+//     setTimeout(() => {
+//       callback(value - 5);
+//     }, 5000);
+//   });
+//   return promise;
+// };
+// const workC = (value, callback) => {
+//   const promise = new Promise((resolve) => {
+//     setTimeout(() => {
+//       callback(value + 10);
+//     }, 5000);
+//   });
+//   return promise;
+// };
+
+// 프로미스 체이닝
+// workA(10)
+//   .then((resA) => {
+//     console.log(`workA : ${resA}`);
+//     return workB(resA);
+//   })
+//   .then((resB) => {
+//     console.log(`workB : ${resB}`);
+//     return workC(resB);
+//   })
+//   .then((resC) => {
+//     console.log(`workC : ${resC}`);
+//   });
+
+// workA(10).then((resA) => {
+//   console.log(`workA : ${resA}`);
+//   workB(resA).then((resB) => {
+//     console.log(`workB : ${resB}`);
+//     workC(resB).then((resC) => {
+//       console.log(`workC : ${resC}`);
+//     });
+//   });
+// });
+
+// workA(10, (resA) => {
+//   console.log(`workA : ${resA}`);
+//   workB(resA, (resB) => {
+//     console.log(`workB : ${resB}`);
+//     workC(resB, (resC) => {
+//       console.log(`workC : ${resC}`);
+//     });
+//   });
+// });
+//////////////////////////// 프로미스 객체
+
+const delay = (ms) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`3초가 지났습니다`);
+    }, ms);
+  });
+};
+
+const start = async () => {
+  delay(3000).then((res) => {
+    console.log(res);
+  });
+};
+
+start();
+//////////////////////////// async와 await
