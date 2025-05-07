@@ -559,9 +559,12 @@ const delay = (ms) => {
 };
 
 const start = async () => {
-  delay(3000).then((res) => {
-    console.log(res);
-  });
+  try {
+    let result = await delay(3000);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 start();
