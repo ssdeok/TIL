@@ -569,36 +569,39 @@
 
 // start();
 
-const workA = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('workA');
-    }, 5000);
-  });
-};
-const workB = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('workB');
-    }, 3000);
-  });
-};
-const workC = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('workC');
-    }, 10000);
-  });
-};
+// const workA = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('workA');
+//     }, 5000);
+//   });
+// };
+// const workB = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('workB');
+//     }, 3000);
+//   });
+// };
+// const workC = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('workC');
+//     }, 10000);
+//   });
+// };
 
-const start = async () => {
-  try {
-    let results = await Promise.all([workA(), workB(), workC()]);
-    results.forEach((res) => console.log(res));
-  } catch (err) {
-    console.log(err);
-  }
-};
+// const start = async () => {
+//   try {
+//     let results = await Promise.all([workA(), workB(), workC()]);
+//     results.forEach((res) => console.log(res));
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
-start();
+// start();
+
 //////////////////////////// async와 await
+
+//////////////////////////// API
