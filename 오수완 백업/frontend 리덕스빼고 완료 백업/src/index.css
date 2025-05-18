@@ -1,0 +1,69 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+
+@import 'tailwindcss';
+
+@theme {
+  --color-blue01: #0085ff;
+  --color-blue02: #69b4ff;
+  --color-title: #222222;
+  --color-body01: #666666;
+  --color-body02: #888888;
+  --color-disable: #b8b8b8;
+  --color-gray04: #aaaaaa;
+  --color-gray03: #cccccc;
+  --color-gray02: #e3e3e3;
+  --color-gray01: #f5f5f5;
+  --color-white: #ffffff;
+  --color-error: #de0000;
+  --color-kyello: #fee500;
+  --color-ngreen: #03c75a;
+
+  --font-pretendard: Pretendard;
+}
+
+@layer base {
+  body {
+    @apply overflow-hidden m-0 p-0;
+  }
+}
+
+@layer components {
+  .pretendard-bold {
+    font: var(--font-pretendard);
+    @apply font-bold;
+  }
+
+  .pretendard-semibold {
+    font: var(--font-pretendard);
+    @apply font-semibold;
+  }
+
+  .pretendard-medium {
+    font: var(--font-pretendard);
+    @apply font-medium;
+  }
+
+  .pretendard-normal {
+    font: var(--font-pretendard);
+    @apply font-normal;
+  }
+
+  .pretendard-light {
+    font: var(--font-pretendard);
+    @apply font-light;
+  }
+
+  .pretendard-extralight {
+    font: var(--font-pretendard);
+    @apply font-extralight;
+  }
+
+  .pretendard-thin {
+    font: var(--font-pretendard);
+    @apply font-thin;
+  }
+
+  .main-container {
+    @apply h-screen;
+  }
+}
